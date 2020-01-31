@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+Rokotteen luonti peli (Reverse plague inc.)
+	Kehitetään rokotetta virusta vastaan
+	Virus tulee randomilla eri statseilla joita pelaaja ei alunperin nää
+	Valitaan alue Euroopasta(Isonnetut valtiot) joista saadaan alkuun eri hyötyjä
+		//(Lämpötila: Tasainen leviäminen)
+		Valtion varallisuus: Lääkeresistanssi kasvaa nopeammin rikkaissa maissa, enemmän sponsoreita/rahoitusta
+		Asukastiheys: Tiheissä leviää nopeammin samassa maassa.
+		Turismin määrä: Leviää nopeammin muihin maihin
+		EU: kyllä/Ei
+	Virusta vastaan taistellaan nostamalla eri statseja
+		Tiedon levittäminien
+			"Lahjoa" politiikkoja
+			"Propagandaa" Lehtiin mainoksia tms.
+		Rahoitus
+			Kehittää tutkimusta
+		Rokotteiden levittäminen/taudin leviämisen hidastus
+			jaetaan hengityssuojia tms.
+			Nostetaan jakelun tehokkuutta
+		
+	Pisteitä/rahaa saadaan
+		Staattisesti määrän X, jota voi nostaa rahoituksen parantamisellla
+		Levittämällä tietoa eteenpäin ja saamalla sponsoreita
+		Lategamessa myymällä rokotteitta
+	Pelin tavoite on saada taudin leviäminen pysähtymään, minimoiden kuolemat.
+		Kuolemista miinuspisteitä
+	
+	
