@@ -46,8 +46,7 @@ public class Country : MonoBehaviour
     {
         
         plague = GetComponent<Plague>();
-<<<<<<< HEAD
-=======
+
 
         foreach (float neighbour in neighbourIds)
         {
@@ -55,7 +54,6 @@ public class Country : MonoBehaviour
 
         }
 
->>>>>>> fdf663d2e5a8e27537d6d477c69ff5ef4040a840
     }
 
     void Update()
@@ -145,11 +143,8 @@ public class Country : MonoBehaviour
 
     }
 
-<<<<<<< HEAD
+
     void OnMouseDown()
-=======
-    public Country(float id, string worldName, List<float> neighbourIds, float outsideSpreadChance, float insideSpreadChance, float wealth, float density, float tourism, bool eU, float populationTotal, float numberOfHealthy, float numberOfInfected, float numberOfDeah, float numberOfVaccinated, float numberOfTransports, float sentVaccinessPerSent)
->>>>>>> fdf663d2e5a8e27537d6d477c69ff5ef4040a840
     {
         GameObject.Find("GameController").GetComponent<UIController>().SetUI(populationTotal, numberOfHealthy, numberOfInfected, numberOfDeah, numberOfVaccinated);
     }

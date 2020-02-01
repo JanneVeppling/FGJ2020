@@ -24,7 +24,7 @@ public class UIController : MonoBehaviour
         
     }
 
-    public void SetUI(int populationTotal, int numberOfHealthy, int numberOfInfected, int numberOfDeah, int numberOfVaccinated)
+    public void SetUI(float populationTotal, float numberOfHealthy, float numberOfInfected, float numberOfDeah, float numberOfVaccinated)
     {
         population.text = populationTotal.ToString();
         noVac.text = numberOfHealthy.ToString();
