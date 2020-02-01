@@ -15,7 +15,7 @@ public class Plague : MonoBehaviour
 
     float informationMultiplier;
 
-    private void Mutate()
+    public void Mutate()
     {
         float chanceRoll = Random.Range(0.0f, 100.0f);
 

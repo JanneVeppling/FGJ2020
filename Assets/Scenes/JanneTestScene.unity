@@ -284,19 +284,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: []
-  neighbourCount: 0
-  outsideSpreadChance: 0
-  insideSpreadChance: 0
+  id: 2
+  worldName: Barbababbaba
+  neighbourIds:
+  - 1
+  neighbourCount: 1
+  outsideSpreadChance: 1
+  insideSpreadChance: 1
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 1.2
+  density: 1
+  tourism: 2
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 17934
+  numberOfHealthy: 17934
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -765,19 +766,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: []
-  neighbourCount: 0
+  id: 18
+  worldName: Phyrexia
+  neighbourIds:
+  - 10
+  - 19
+  - 13
+  - 17
+  neighbourCount: 3
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 1.1
+  density: 1.4
+  tourism: 1.6
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 62178
+  numberOfHealthy: 62178
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -936,19 +941,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: []
-  neighbourCount: 0
+  id: 20
+  worldName: the Confederate of Zigeria
+  neighbourIds:
+  - 1
+  neighbourCount: 1
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 2
+  density: 2
+  tourism: 2
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 45987
+  numberOfHealthy: 45987
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -1608,19 +1614,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: []
-  neighbourCount: 0
+  id: 13
+  worldName: Ravnica
+  neighbourIds:
+  - 15
+  - 14
+  - 11
+  - 12
+  - 10
+  - 19
+  - 18
+  - 17
+  - 16
+  neighbourCount: 9
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 0.8
+  density: 1.6
+  tourism: 1.7
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 75132
+  numberOfHealthy: 75132
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -1653,7 +1668,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042025380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2095453048}
@@ -2006,6 +2021,135 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1138586110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1138586114}
+  - component: {fileID: 1138586113}
+  - component: {fileID: 1138586112}
+  - component: {fileID: 1138586111}
+  m_Layer: 0
+  m_Name: Maapalloikoni
+  m_TagString: Country
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!58 &1138586111
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138586110}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.013837814, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.909587
+--- !u!114 &1138586112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138586110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  worldName: Total
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
+  wealth: 0
+  density: 0
+  tourism: 0
+  EU: 0
+  populationTotal: 0
+  numberOfHealthy: 0
+  numberOfInfected: 0
+  numberOfDeah: 0
+  numberOfVaccinated: 0
+  numberOfTransports: 0
+  sentVaccinessPerSent: 0
+--- !u!212 &1138586113
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138586110}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 11345a8e78db9de4389f0b0473d6eaeb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5.12, y: 5.12}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1138586114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138586110}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.34, y: 8.33, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1169251682
 GameObject:
   m_ObjectHideFlags: 0
@@ -2016,41 +2160,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1169251685}
   - component: {fileID: 1169251684}
-  - component: {fileID: 1169251683}
-  - component: {fileID: 1169251686}
   m_Layer: 0
   m_Name: Mappi_valmis_jaettu
-  m_TagString: Country
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1169251683
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169251682}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 40.213333, y: 22.619999}
-    newSize: {x: 40.213333, y: 22.619999}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 40.213333, y: 22.619999}
-  m_EdgeRadius: 0
 --- !u!212 &1169251684
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2115,36 +2231,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1169251686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169251682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 0
-  worldName: Maapallo
-  neighbourIds: []
-  neighbourCount: 0
-  outsideSpreadChance: 0
-  insideSpreadChance: 0
-  percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
-  EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
-  numberOfInfected: 0
-  numberOfDeah: 0
-  numberOfVaccinated: 0
-  numberOfTransports: 0
-  sentVaccinessPerSent: 0
 --- !u!1 &1187276771
 GameObject:
   m_ObjectHideFlags: 0
@@ -2298,19 +2384,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
+  id: 7
+  worldName: Penna
   neighbourIds: []
   neighbourCount: 0
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 1.1
+  density: 2
+  tourism: 2
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 85412
+  numberOfHealthy: 85412
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -2362,22 +2448,62 @@ PrefabInstance:
     - target: {fileID: 5652214334375902652, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5652214334375902652, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5652214334375902652, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5652214334375902652, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652214334375902652, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652214334375902652, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652214334375902652, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_fontColor.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652214334375902652, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652214334375902652, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652214334375902652, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652214334375902653, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -345
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652214334375902653, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 5652214334472056638, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
         type: 3}
@@ -2480,6 +2606,16 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5652214334804299079, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 192
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652214334804299079, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5652214335062994073, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -2561,6 +2697,16 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5652214335089352371, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -205.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652214335089352371, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 50.000004
+      objectReference: {fileID: 0}
     - target: {fileID: 5652214335133112403, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -2590,6 +2736,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652214335211156936, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5652214335211156948, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
         type: 3}
@@ -2701,6 +2852,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1062106847}
+    - target: {fileID: 5652214335354279248, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 56.720016
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652214335354279248, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 50.000004
+      objectReference: {fileID: 0}
     - target: {fileID: 5652214335354279251, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -2785,6 +2946,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652214335473362865, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 326
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652214335473362865, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 49.60001
       objectReference: {fileID: 0}
     - target: {fileID: 5652214335505080246, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
         type: 3}
@@ -2963,6 +3134,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652214336011206221, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -74.10001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652214336011206221, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 50.000004
       objectReference: {fileID: 0}
     - target: {fileID: 5652214336052200754, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
         type: 3}
@@ -3235,19 +3416,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: []
-  neighbourCount: 0
+  id: 15
+  worldName: Kekistan
+  neighbourIds:
+  - 14
+  - 13
+  neighbourCount: 2
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 0.5
+  density: 0.69
+  tourism: 0.1
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 6741
+  numberOfHealthy: 6741
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -3433,19 +3616,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: []
-  neighbourCount: 0
+  id: 12
+  worldName: Dominaria
+  neighbourIds:
+  - 10
+  - 11
+  - 13
+  neighbourCount: 3
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 1.1
+  density: 0.9
+  tourism: 1.2
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 45621
+  numberOfHealthy: 45621
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -3625,19 +3811,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: []
-  neighbourCount: 0
+  id: 17
+  worldName: Akroas
+  neighbourIds:
+  - 13
+  - 16
+  - 18
+  neighbourCount: 3
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 1.4
+  density: 1.1
+  tourism: 1.6
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 28763
+  numberOfHealthy: 28763
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -3792,19 +3981,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: []
-  neighbourCount: 0
+  id: 16
+  worldName: Theros
+  neighbourIds:
+  - 13
+  - 17
+  neighbourCount: 2
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
+  wealth: 2.3
+  density: 0.8
   tourism: 0
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 32185
+  numberOfHealthy: 32185
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -4167,19 +4358,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: []
-  neighbourCount: 0
+  id: 14
+  worldName: Kalseth
+  neighbourIds:
+  - 11
+  - 13
+  - 15
+  neighbourCount: 3
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 1.1
+  density: 1.1
+  tourism: 1.1
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 15614
+  numberOfHealthy: 15614
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -4379,19 +4573,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
+  id: 19
+  worldName: NullReferenceException
   neighbourIds: []
   neighbourCount: 0
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 1
+  density: 2
+  tourism: 2
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 35102
+  numberOfHealthy: 35102
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -4761,19 +4955,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: []
-  neighbourCount: 0
+  id: 10
+  worldName: the Holy Monarchy of Balumiini
+  neighbourIds:
+  - 6
+  - 5
+  - 9
+  - 11
+  - 12
+  - 13
+  - 18
+  - 19
+  neighbourCount: 8
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 0.7
+  density: 1.8
+  tourism: 0.1
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 158496
+  numberOfHealthy: 158496
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -5004,19 +5206,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: []
-  neighbourCount: 0
+  id: 8
+  worldName: North Pheldagriffia
+  neighbourIds:
+  - 1
+  neighbourCount: 1
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 0.8
+  density: 1
+  tourism: 1.9
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 40561
+  numberOfHealthy: 40561
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -5039,6 +5242,7 @@ GameObject:
   - component: {fileID: 1831976161}
   - component: {fileID: 1831976159}
   - component: {fileID: 1831976162}
+  - component: {fileID: 1831976160}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -5066,6 +5270,23 @@ MonoBehaviour:
   readyToSentVaccines: 0
   currentSelecetedWorld: 0
   countries: []
+--- !u!114 &1831976160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831976158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5afd1f53301fca44083358ec2b9ff990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drugRes: 0
+  outsideChance: 0
+  insideChance: 0
+  airborne: 0
+  deathchance: 0
 --- !u!4 &1831976161
 Transform:
   m_ObjectHideFlags: 0
@@ -5100,7 +5321,7 @@ MonoBehaviour:
   noVac: {fileID: 1353311272}
   vaccines: {fileID: 104757401}
   money: {fileID: 915429182}
-  sendInput: {fileID: 0}
+  sendInput: {fileID: 1686972707}
   UpgradeMenu: {fileID: 1931198502}
 --- !u!1 &1918610482
 GameObject:
@@ -5334,19 +5555,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: []
-  neighbourCount: 0
+  id: 11
+  worldName: My swamp
+  neighbourIds:
+  - 9
+  - 10
+  - 12
+  - 13
+  - 14
+  neighbourCount: 5
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 0.4
+  density: 0.5
+  tourism: 0.6
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 1298
+  numberOfHealthy: 1298
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -5481,19 +5707,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: []
-  neighbourCount: 0
-  outsideSpreadChance: 0
-  insideSpreadChance: 0
+  id: 3
+  worldName: North Solero
+  neighbourIds:
+  - 4
+  neighbourCount: 1
+  outsideSpreadChance: 1
+  insideSpreadChance: 1
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 0.3
+  density: 1.5
+  tourism: 0.2
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 24957
+  numberOfHealthy: 24957
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -5659,19 +5886,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: []
-  neighbourCount: 0
+  id: 9
+  worldName: Banana Republic
+  neighbourIds:
+  - 5
+  - 10
+  - 11
+  neighbourCount: 3
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 1.7
+  density: 1
+  tourism: 1.7
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 8216
+  numberOfHealthy: 8216
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -5822,19 +6052,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: []
-  neighbourCount: 0
+  id: 6
+  worldName: TaivasLandia
+  neighbourIds:
+  - 1
+  - 4
+  - 5
+  neighbourCount: 3
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 2
+  density: 0.3
+  tourism: 0.3
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 3000
+  numberOfHealthy: 3000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -6047,19 +6280,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: []
-  neighbourCount: 0
+  id: 4
+  worldName: JeesusLandia
+  neighbourIds:
+  - 3
+  - 6
+  - 1
+  - 5
+  neighbourCount: 4
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 0.2
+  density: 1.3
+  tourism: 1.7
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 55612
+  numberOfHealthy: 55612
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -6509,19 +6746,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: Tanja
-  neighbourIds: []
-  neighbourCount: 0
-  outsideSpreadChance: 0
-  insideSpreadChance: 0
+  id: 1
+  worldName: Meria
+  neighbourIds:
+  - 2
+  - 9
+  - 20
+  - 3
+  - 6
+  neighbourCount: 5
+  outsideSpreadChance: 1
+  insideSpreadChance: 1
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 1
+  density: 1
+  tourism: 1
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 98426
+  numberOfHealthy: 98426
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
@@ -6785,19 +7027,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: []
-  neighbourCount: 0
+  id: 5
+  worldName: Gevell Kingdom
+  neighbourIds:
+  - 4
+  - 6
+  - 10
+  - 9
+  neighbourCount: 4
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
+  wealth: 1.7
+  density: 1
+  tourism: 0.2
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
+  populationTotal: 19845
+  numberOfHealthy: 19845
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0

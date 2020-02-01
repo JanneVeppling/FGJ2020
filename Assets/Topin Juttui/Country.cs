@@ -9,16 +9,16 @@ public class Country : MonoBehaviour
     public int id;
     public string worldName;
     public List<float> neighbourIds = new List<float>();
-    public float neighbourCount = 0;
-    public float outsideSpreadChance;
-    public float insideSpreadChance;
+    public float neighbourCount;
+    public float outsideSpreadChance = 1.2f;
+    public float insideSpreadChance = 1f;
     public float percentageMultiplier = 1f;
 
 
     public float wealth;   // 0.5 to 2?
     public float density;  // 0.5 to 2?
     public float tourism;  // 0.5 to 2?
-    public bool EU;
+     bool EU;
 
     public float populationTotal;
     public float numberOfHealthy;
@@ -49,12 +49,11 @@ public class Country : MonoBehaviour
             SpreadOutside();
             DeathChance();
 
-            GameObject.Find("Maa" + neighbourRoll).GetComponent<Plague>().Mutate();
+            GameObject.Find("GameController").GetComponent<Plague>().Mutate();
             GameObject.Find("asia").GetComponent<Transpoerts>().TravellingInfect();
 
             targetTime = 2.0f;
             }
-
         }
 
 

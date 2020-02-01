@@ -14,10 +14,10 @@ public class Transpoerts : MonoBehaviour
 
     public List<float> TransportIDs = new List<float>();
 
-    void TravellingInfect()
+    public void TravellingInfect()
     {
         GameObject[] transports;
-        transports = GameObject.FindGameObjectsWithTag("transport");
+        transports = GameObject.FindGameObjectsWithTag("Maa");
 
         float chanceRoll = Random.Range(0.0f, 100.0f);
 
@@ -30,7 +30,7 @@ public class Transpoerts : MonoBehaviour
         {
             int transportroll = Random.Range(0, transports.Length);
 
-            float countryId = GameObject.Find("transport" + transportroll).GetComponent<Transpoerts>().transportCountryId;
+            float countryId = GameObject.Find("Maa" + transportroll).GetComponent<Country>().id;
 
             int infectedRoll = (Random.Range(1, 10));
 
