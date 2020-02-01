@@ -44,12 +44,7 @@ public class Country : MonoBehaviour
 
     void Awake()
     {    
-        foreach (float neighbour in neighbourIds)
-        {
-            neighbourCount++;
-          
-
-        }
+       
     }
 
     void Update()
@@ -93,13 +88,19 @@ public class Country : MonoBehaviour
 
     void SpreadOutside()
     {
+
+     /*   foreach (float neighbour in neighbourIds)
+        {
+            neighbourCount++;
+        }
+        */
         int neighbourRoll =Random.Range(0, neighbourIds.Count);
 
         float plagueOutsideChance = GameObject.Find("asia").GetComponent<Plague>().outsideChance;
 
         float healthy = GameObject.Find("asia" + neighbourRoll).GetComponent<Country>().numberOfHealthy;
 
-        if (healthy <= 0f) //NeighbourID numberofhealthy
+        if (healthy <= 0f) 
         {
            
             float currenteHealthPercent = (numberOfHealthy / populationTotal) * 100f;
