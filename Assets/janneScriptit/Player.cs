@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public int vaccinesPerSec;
     public float numOfVaccines;
     public bool readyToSentVaccines;
+    public int currentSelecetedWorld;
 
     public GameObject[] countries;
 
@@ -17,8 +18,7 @@ public class Player : MonoBehaviour
     {
         countries = GameObject.FindGameObjectsWithTag("Country");
 
-        InvokeRepeating("AddFunds", 10f, 2f);
-        InvokeRepeating("SendVaccines", 0f, 5f);
+        InvokeRepeating("AddFundsAndVaccines", 10f, 2f);
 
         GameObject.Find("GameController").GetComponent<Plague>();
     }
@@ -30,11 +30,13 @@ public class Player : MonoBehaviour
             InvokeRepeating("SendVaccines", 0f, 5f);
 
         GameObject.Find("GameController").GetComponent<UIController>().SetMoneyAndVaccines(totalFunds, numOfVaccines);
+
     }
 
-    void AddFunds()
+    void AddFundsAndVaccines()
     {
         totalFunds += 2 * (passiveIncome);
+        numOfVaccines += 2 * (vaccinesPerSec);
     }
 
     public void VaccineLevel1()
@@ -42,11 +44,8 @@ public class Player : MonoBehaviour
         if (totalFunds >= 500)
         {
             totalFunds -= 500;
-            if (gameObject.GetComponent<Vaccine>().effectivity == 0)
-            {
-                gameObject.GetComponent<Vaccine>().effectivity = 1;
-                readyToSentVaccines = true;
-            }
+            vaccinesPerSec = 10000;
+            readyToSentVaccines = true;
         }
     }
 
@@ -55,8 +54,7 @@ public class Player : MonoBehaviour
         if (totalFunds >= 2000)
         {
             totalFunds -= 2000;
-            if (gameObject.GetComponent<Vaccine>().effectivity == 1)
-                gameObject.GetComponent<Vaccine>().effectivity = 2;
+            vaccinesPerSec = 50000;
         }
     }
 
@@ -65,8 +63,7 @@ public class Player : MonoBehaviour
         if (totalFunds >= 10000)
         {
             totalFunds -= 10000;
-            if (gameObject.GetComponent<Vaccine>().effectivity == 2)
-                gameObject.GetComponent<Vaccine>().effectivity = 3;
+            vaccinesPerSec = 100000;
         }
     }
 
@@ -124,14 +121,34 @@ public class Player : MonoBehaviour
         }
     }
 
-    void SendVaccines()
+    public void SendVaccines()
     {
         foreach(GameObject country in countries)
         {
-            float temp = country.GetComponent<Country>().sentVaccinessPerSent;
+            if(country.GetComponent<Country>().id == currentSelecetedWorld)
+            {
+                int temp = int.Parse(gameObject.GetComponent<UIController>().sendInput.text);
 
-            if (temp >= numOfVaccines)
-                numOfVaccines -= temp;
+                Debug.Log(temp);
+
+                if(temp <= numOfVaccines)
+                {
+                    if(temp <= country.GetComponent<Country>().numberOfInfected)
+                    {
+                        country.GetComponent<Country>().numberOfInfected -= temp;
+                        country.GetComponent<Country>().numberOfVaccinated += temp;
+                        numOfVaccines -= temp;
+                    }
+                    else if (temp >= country.GetComponent<Country>().numberOfInfected)
+                    {
+                        float a = temp - country.GetComponent<Country>().numberOfInfected;
+                        country.GetComponent<Country>().numberOfVaccinated += temp;
+                        country.GetComponent<Country>().numberOfInfected = 0;
+                        country.GetComponent<Country>().numberOfHealthy -= a;
+                    }
+                }
+                gameObject.GetComponent<UIController>().SetUI(country.GetComponent<Country>().worldName, country.GetComponent<Country>().populationTotal, country.GetComponent<Country>().numberOfHealthy, country.GetComponent<Country>().numberOfInfected, country.GetComponent<Country>().numberOfDeah, country.GetComponent<Country>().numberOfVaccinated);
+            }
         }
     }
 }

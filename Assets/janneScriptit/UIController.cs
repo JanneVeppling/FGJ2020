@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class UIController : MonoBehaviour
     public TextMeshProUGUI noVac;
     public TextMeshProUGUI vaccines;
     public TextMeshProUGUI money;
+
+    public Text sendInput;
 
     public GameObject UpgradeMenu;
 
