@@ -13,8 +13,8 @@ public class Transpoerts : MonoBehaviour
     public float transportCountryId;
     public List<float> TransportIDs = new List<float>();
 
-  
-    
+
+
 
     void TravellingInfect()
     {
@@ -46,6 +46,6 @@ public class Transpoerts : MonoBehaviour
 }
 
 
-    
+
 
 
