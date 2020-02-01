@@ -484,7 +484,7 @@ RectTransform:
   m_Children:
   - {fileID: 109763412}
   m_Father: {fileID: 1133950174}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1249,7 +1249,7 @@ RectTransform:
   m_Children:
   - {fileID: 231503412}
   m_Father: {fileID: 1133950174}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1882,7 +1882,7 @@ RectTransform:
   m_Children:
   - {fileID: 1839397351}
   m_Father: {fileID: 1133950174}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2436,11 +2436,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1701963009}
   - {fileID: 220644558}
   - {fileID: 513886537}
   - {fileID: 1004673006}
   - {fileID: 1889090079}
-  - {fileID: 1701963009}
   - {fileID: 370708909}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -4282,7 +4282,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1133950174}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4637,10 +4637,6 @@ MonoBehaviour:
   dead: {fileID: 1839397352}
   sick: {fileID: 991260594}
   noVac: {fileID: 231503413}
-  world: {fileID: 0}
-  country1: {fileID: 0}
-  country2: {fileID: 0}
-  camera: {fileID: 1062106847}
 --- !u!1 &1839397350
 GameObject:
   m_ObjectHideFlags: 0
@@ -4827,7 +4823,7 @@ RectTransform:
   m_Children:
   - {fileID: 991260593}
   m_Father: {fileID: 1133950174}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6337,12 +6333,12 @@ MonoBehaviour:
   worldName: 
   neighbourIds: 
   wealth: 0
-  density: 0
+  density: 2
   tourism: 0
   EU: 0
-  populationTotal: 0
-  numberOfHealthy: 0
-  numberOfInfected: 0
+  populationTotal: 500000
+  numberOfHealthy: 400000
+  numberOfInfected: 100000
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
