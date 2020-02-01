@@ -29,21 +29,32 @@ public class Country : MonoBehaviour
 
     public float sentVaccinessPerSent;
 
+    public float targetTime = 10.0f;
+
+
     void Start()
     {
       
     }
 
-
-    void Awake()
-    {
-
-    }
-
     void Update()
     {
+            targetTime -= Time.deltaTime;
 
-    }
+            if (targetTime <= 0.0f)
+            {
+
+            SpreadInside();
+            SpreadOutside();
+            DeathChance();
+
+            GameObject.Find("Maa" + neighbourRoll).GetComponent<Plague>().Mutate();
+            GameObject.Find("asia").GetComponent<Transpoerts>().TravellingInfect();
+
+            targetTime = 2.0f;
+            }
+
+        }
 
     void SpreadInside()
     {
@@ -85,7 +96,7 @@ public class Country : MonoBehaviour
 
         float plagueOutsideChance = GameObject.Find("asia").GetComponent<Plague>().outsideChance;
 
-        float healthy = GameObject.Find("asia" + neighbourRoll).GetComponent<Country>().numberOfHealthy;
+        float healthy = GameObject.Find("Maa" + neighbourRoll).GetComponent<Country>().numberOfHealthy;
 
         if (healthy <= 0f)
         {
@@ -115,8 +126,8 @@ public class Country : MonoBehaviour
 
                 infectedPeople = infectedPeople + infectedRoll ;
 
-                GameObject.Find("asia" + neighbourRoll).GetComponent<Country>().numberOfHealthy -= infectedPeople;
-                GameObject.Find("asia" + neighbourRoll).GetComponent<Country>().numberOfInfected += infectedPeople;
+                GameObject.Find("Maa" + neighbourRoll).GetComponent<Country>().numberOfHealthy -= infectedPeople;
+                GameObject.Find("Maa" + neighbourRoll).GetComponent<Country>().numberOfInfected += infectedPeople;
             }
         }
     }
@@ -130,7 +141,7 @@ public class Country : MonoBehaviour
 
         numberOfInfected -= deadpeople;
         numberOfDeah += deadpeople;
-        Debug.Log(deadpeople + "has died");
+        Debug.Log(deadpeople + " people has died");
     }
 
     void OnMouseDown()
