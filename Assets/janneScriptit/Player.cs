@@ -9,11 +9,17 @@ public class Player : MonoBehaviour
     public int passiveIncome;
     public int sponsMoneyPerSec;
     public int vaccinesPerSec;
+    public float numOfVaccines;
     public bool readyToSentVaccines;
+
+    public GameObject[] countries;
 
     void Start()
     {
+        countries = GameObject.FindGameObjectsWithTag("Country");
+
         InvokeRepeating("AddFunds", 10f, 2f);
+        InvokeRepeating("SendVaccines", 0f, 5f);
     }
 
     void Update()
@@ -28,8 +34,19 @@ public class Player : MonoBehaviour
         totalFunds += 2 * (passiveIncome + sponsMoneyPerSec);
     }
 
-    public void SendVaccines()
+    public void VaccineLevelUpgrade()
     {
+        gameObject.GetComponent<Vaccine>().effectivity += 1;
+    }
 
+    void SendVaccines()
+    {
+        foreach(GameObject country in countries)
+        {
+            float temp = country.GetComponent<Country>().sentVaccinessPerSent;
+
+            if (temp <= numOfVaccines)
+                numOfVaccines -= temp;
+        }
     }
 }

@@ -30,15 +30,9 @@ public class Country : MonoBehaviour
     public float sentVaccinessPerSent;
 
 
-    //public List<Country> countries = new List<Country>();
-
     void Start()
     {
-        //Idea toistaiseksi paussilla
-       /* countries.Add(new Country(0, "World", neighbourIds, 0, 0, 0, 0, 0, false, 1000000, 1000000, 0, 0, 0, 0, 0));
-        countries.Add(new Country(1, "Kissala", neighbourIds, 0, 0, 0, 0, 0, false, 1000, 1000, 0, 0, 0, 0, 0));
-        countries.Add(new Country(2, "Turuk", neighbourIds, 0, 0, 0, 0, 0, false, 7000, 7000, 0, 0, 0, 0, 0));
-        */
+        
     }
 
 
@@ -94,7 +88,7 @@ public class Country : MonoBehaviour
         }
     }
 
-    void SpreadOutside()
+   /* void SpreadOutside()
     {
         float neighbourRoll =(float) Random.Range(0, neighbourIds.Count);
 
@@ -138,11 +132,11 @@ public class Country : MonoBehaviour
             }
         }
 
-    }
+    }*/
 
 
     void OnMouseDown()
     {
-        GameObject.Find("GameController").GetComponent<UIController>().SetUI(populationTotal, numberOfHealthy, numberOfInfected, numberOfDeah, numberOfVaccinated);
+        GameObject.Find("GameController").GetComponent<UIController>().SetUI(worldName, populationTotal, numberOfHealthy, numberOfInfected, numberOfDeah, numberOfVaccinated);
     }
 }

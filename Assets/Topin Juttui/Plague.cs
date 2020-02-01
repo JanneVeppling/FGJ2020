@@ -11,9 +11,6 @@ public class Plague : MonoBehaviour
     public bool airborne;
     float airborneMutationChance;
 
-
-    //   >
-
     private void Mutate()
     {
         float chanceRoll = Random.Range(0.0f, 100.0f);
@@ -37,7 +34,4 @@ public class Plague : MonoBehaviour
             //do smoll mutation stuff
         }
     }
-
-
-
 }

@@ -15,7 +15,7 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetUI(0,0,0,0,0);
+        SetUI("World",0,0,0,0,0);
     }
 
     // Update is called once per frame
@@ -24,8 +24,9 @@ public class UIController : MonoBehaviour
         
     }
 
-    public void SetUI(float populationTotal, float numberOfHealthy, float numberOfInfected, float numberOfDeah, float numberOfVaccinated)
+    public void SetUI(string worldName, float populationTotal, float numberOfHealthy, float numberOfInfected, float numberOfDeah, float numberOfVaccinated)
     {
+        Place.text = worldName;
         population.text = populationTotal.ToString();
         noVac.text = numberOfHealthy.ToString();
         vac.text = numberOfVaccinated.ToString();

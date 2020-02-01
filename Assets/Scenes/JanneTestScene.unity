@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 31557023}
   m_Layer: 0
   m_Name: Maa2
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -284,9 +284,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 2
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -478,7 +482,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220644557}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.64444, y: 0.64444, z: 0.64444}
   m_Children:
@@ -488,7 +492,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 177.72003, y: 181.4}
+  m_AnchoredPosition: {x: 79.72003, y: 181.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &220644559
@@ -881,7 +885,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370708908}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.64444, y: 0.64444, z: 0.64444}
   m_Children:
@@ -891,7 +895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -84, y: 181.4}
+  m_AnchoredPosition: {x: -182, y: 181.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &370708910
@@ -1026,7 +1030,7 @@ GameObject:
   - component: {fileID: 511513528}
   m_Layer: 0
   m_Name: Maa19
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1204,9 +1208,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 18
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -1243,7 +1251,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 513886536}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.64444, y: 0.64444, z: 0.64444}
   m_Children:
@@ -1253,7 +1261,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46.9, y: 181.4}
+  m_AnchoredPosition: {x: -51.1, y: 181.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &513886538
@@ -1388,7 +1396,7 @@ GameObject:
   - component: {fileID: 547401206}
   m_Layer: 0
   m_Name: Maa21
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1527,9 +1535,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 29
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -1876,7 +1888,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004673005}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.64444, y: 0.64444, z: 0.64444}
   m_Children:
@@ -1886,7 +1898,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 306.60403, y: 181.39998}
+  m_AnchoredPosition: {x: 208.60403, y: 181.39998}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1004673007
@@ -2021,7 +2033,7 @@ GameObject:
   - component: {fileID: 1013638558}
   m_Layer: 0
   m_Name: Maa14
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2249,9 +2261,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 13
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -2298,8 +2314,8 @@ Camera:
   m_GameObject: {fileID: 1062106845}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 3
+  m_BackGroundColor: {r: 0.8113208, g: 0.3881311, b: 0.095674604, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2316,7 +2332,7 @@ Camera:
   far clip plane: 1000
   field of view: 23
   orthographic: 1
-  orthographic size: 12
+  orthographic size: 11
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2464,7 +2480,7 @@ GameObject:
   - component: {fileID: 1169251686}
   m_Layer: 0
   m_Name: Mappi_valmis_jaettu
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2573,7 +2589,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -2599,7 +2619,7 @@ GameObject:
   - component: {fileID: 1187276775}
   m_Layer: 0
   m_Name: Maa8
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2738,9 +2758,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 7
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -2766,7 +2790,7 @@ GameObject:
   - component: {fileID: 1356507899}
   m_Layer: 0
   m_Name: Maa16
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2881,9 +2905,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 15
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -2909,7 +2937,7 @@ GameObject:
   - component: {fileID: 1358602740}
   m_Layer: 0
   m_Name: Maa13
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3075,9 +3103,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 12
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -3103,7 +3135,7 @@ GameObject:
   - component: {fileID: 1398183467}
   m_Layer: 0
   m_Name: Maa18
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3263,9 +3295,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 17
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -3291,7 +3327,7 @@ GameObject:
   - component: {fileID: 1398632878}
   m_Layer: 0
   m_Name: Maa17
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3426,9 +3462,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 16
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -3454,7 +3494,7 @@ GameObject:
   - component: {fileID: 1466666253}
   m_Layer: 0
   m_Name: Maa15
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3658,9 +3698,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 14
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -3752,7 +3796,7 @@ GameObject:
   - component: {fileID: 1595753255}
   m_Layer: 0
   m_Name: Maa20
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3866,9 +3910,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 19
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -3894,7 +3942,7 @@ GameObject:
   - component: {fileID: 1667302224}
   m_Layer: 0
   m_Name: Maa11
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4238,9 +4286,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 10
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -4277,7 +4329,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701963008}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4286,7 +4338,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -224, y: 166}
+  m_AnchoredPosition: {x: -322, y: 166}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1701963010
@@ -4421,7 +4473,7 @@ GameObject:
   - component: {fileID: 1743830361}
   m_Layer: 0
   m_Name: Maa9
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4555,9 +4607,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 8
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -4600,11 +4656,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numOfInfectedCountries: 0
-  totalFunds: 0
-  passiveIncome: 0
+  totalFunds: 100
+  passiveIncome: 1
   sponsMoneyPerSec: 0
   vaccinesPerSec: 0
   readyToSentVaccines: 0
+  countries: []
 --- !u!4 &1831976161
 Transform:
   m_ObjectHideFlags: 0
@@ -4817,7 +4874,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889090078}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.64444, y: 0.64444, z: 0.64444}
   m_Children:
@@ -4827,7 +4884,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 437.42004, y: 181.39998}
+  m_AnchoredPosition: {x: 339.42004, y: 181.39998}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1889090080
@@ -4962,7 +5019,7 @@ GameObject:
   - component: {fileID: 1918610486}
   m_Layer: 0
   m_Name: Maa12
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5180,9 +5237,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 11
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -5208,7 +5269,7 @@ GameObject:
   - component: {fileID: 1930088897}
   m_Layer: 0
   m_Name: Maa4
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5323,9 +5384,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 3
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -5351,7 +5416,7 @@ GameObject:
   - component: {fileID: 1962860578}
   m_Layer: 0
   m_Name: Maa10
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5491,9 +5556,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 9
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -5519,7 +5588,7 @@ GameObject:
   - component: {fileID: 1987581280}
   m_Layer: 0
   m_Name: Maa7
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5650,9 +5719,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 6
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -5678,7 +5751,7 @@ GameObject:
   - component: {fileID: 2025257101}
   m_Layer: 0
   m_Name: Maa5
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5871,9 +5944,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 4
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
@@ -5899,7 +5976,7 @@ GameObject:
   - component: {fileID: 2067061838}
   m_Layer: 0
   m_Name: Maa1
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6329,9 +6406,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: 
-  neighbourIds: 
+  id: 1
+  worldName: Tanja
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 2
   tourism: 0
@@ -6357,7 +6438,7 @@ GameObject:
   - component: {fileID: 2143445038}
   m_Layer: 0
   m_Name: Maa6
-  m_TagString: Untagged
+  m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6524,9 +6605,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 5
   worldName: 
-  neighbourIds: 
+  neighbourIds: []
+  neighbourCount: 0
+  outsideSpreadChance: 0
+  insideSpreadChance: 0
+  percentageMultiplier: 1
   wealth: 0
   density: 0
   tourism: 0
