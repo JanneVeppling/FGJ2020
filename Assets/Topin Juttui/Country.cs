@@ -44,7 +44,6 @@ public class Country : MonoBehaviour
     void Awake()
     {
         plague = GetComponent<Plague>();
-
     }
 
     void Update()
@@ -81,11 +80,6 @@ public class Country : MonoBehaviour
 
                 numberOfHealthy = numberOfHealthy - infectedPeople;
                 numberOfInfected = numberOfInfected + infectedPeople;
-             
-
-
-
-
             }
 
         }
@@ -132,23 +126,8 @@ public class Country : MonoBehaviour
 
     }
 
-    public Country(int id, string worldName, List<int> neighbourIds, float outsideSpreadChance, float insideSpreadChance, float wealth, float density, float tourism, bool eU, int populationTotal, int numberOfHealthy, int numberOfInfected, int numberOfDeah, int numberOfVaccinated, int numberOfTransports, int sentVaccinessPerSent)
+    void OnMouseDown()
     {
-        this.id = id;
-        this.worldName = worldName;
-        this.neighbourIds = neighbourIds;
-        this.outsideSpreadChance = outsideSpreadChance;
-        this.insideSpreadChance = insideSpreadChance;
-        this.wealth = wealth;
-        this.density = density;
-        this.tourism = tourism;
-        EU = eU;
-        this.populationTotal = populationTotal;
-        this.numberOfHealthy = numberOfHealthy;
-        this.numberOfInfected = numberOfInfected;
-        this.numberOfDeah = numberOfDeah;
-        this.numberOfVaccinated = numberOfVaccinated;
-        this.numberOfTransports = numberOfTransports;
-        this.sentVaccinessPerSent = sentVaccinessPerSent;
+        GameObject.Find("GameController").GetComponent<UIController>().SetUI(populationTotal, numberOfHealthy, numberOfInfected, numberOfDeah, numberOfVaccinated);
     }
 }

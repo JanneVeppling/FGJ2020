@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-
         InvokeRepeating("AddFunds", 10f, 2f);
     }
 
