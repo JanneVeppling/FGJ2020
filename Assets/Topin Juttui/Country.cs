@@ -6,10 +6,9 @@ public class Country : MonoBehaviour
 {
     private Plague plague;
 
-
-
     public int id;
-    List<int> neighbourIds = new List<int>();
+    public string worldName;
+    public List<int> neighbourIds = new List<int>();
     float outsideSpreadChance;
     float insideSpreadChance;
 
@@ -28,9 +27,15 @@ public class Country : MonoBehaviour
     public int sentVaccinessPerSent;
 
 
+    //public List<Country> countries = new List<Country>();
+
     void Start()
     {
-
+        //Idea toistaiseksi paussilla
+       /* countries.Add(new Country(0, "World", neighbourIds, 0, 0, 0, 0, 0, false, 1000000, 1000000, 0, 0, 0, 0, 0));
+        countries.Add(new Country(1, "Kissala", neighbourIds, 0, 0, 0, 0, 0, false, 1000, 1000, 0, 0, 0, 0, 0));
+        countries.Add(new Country(2, "Turuk", neighbourIds, 0, 0, 0, 0, 0, false, 7000, 7000, 0, 0, 0, 0, 0));
+        */
     }
 
 
@@ -42,10 +47,8 @@ public class Country : MonoBehaviour
 
     void Update()
     {
-
+        
     }
-
-
 
     void SpreadInside()
     {
@@ -95,6 +98,23 @@ public class Country : MonoBehaviour
 
     }
 
-
-
+    public Country(int id, string worldName, List<int> neighbourIds, float outsideSpreadChance, float insideSpreadChance, float wealth, float density, float tourism, bool eU, int populationTotal, int numberOfHealthy, int numberOfInfected, int numberOfDeah, int numberOfVaccinated, int numberOfTransports, int sentVaccinessPerSent)
+    {
+        this.id = id;
+        this.worldName = worldName;
+        this.neighbourIds = neighbourIds;
+        this.outsideSpreadChance = outsideSpreadChance;
+        this.insideSpreadChance = insideSpreadChance;
+        this.wealth = wealth;
+        this.density = density;
+        this.tourism = tourism;
+        EU = eU;
+        this.populationTotal = populationTotal;
+        this.numberOfHealthy = numberOfHealthy;
+        this.numberOfInfected = numberOfInfected;
+        this.numberOfDeah = numberOfDeah;
+        this.numberOfVaccinated = numberOfVaccinated;
+        this.numberOfTransports = numberOfTransports;
+        this.sentVaccinessPerSent = sentVaccinessPerSent;
+    }
 }
