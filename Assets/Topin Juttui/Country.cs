@@ -101,7 +101,7 @@ public class Country : MonoBehaviour
             //muuta kaikki neighborin alle
             float currenteHealthPercent = (numberOfHealthy / populationTotal) * 100f;
 
-            //mahdollinen overloadata insidestä neighbour idllä?
+           
             if (currenteHealthPercent > 98 || currenteHealthPercent < 2) percentageMultiplier = 0.2f;
             else if (currenteHealthPercent > 95 & currenteHealthPercent < 98 || currenteHealthPercent > 2 & currenteHealthPercent < 5) percentageMultiplier = 0.4f;
             else if (currenteHealthPercent > 85 & currenteHealthPercent < 95 || currenteHealthPercent > 5 & currenteHealthPercent < 15) percentageMultiplier = 0.6f;
