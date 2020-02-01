@@ -29,16 +29,9 @@ public class Country : MonoBehaviour
 
     public float sentVaccinessPerSent;
 
-
-    //public List<Country> countries = new List<Country>();
-
     void Start()
     {
-        //Idea toistaiseksi paussilla
-        /* countries.Add(new Country(0, "World", neighbourIds, 0, 0, 0, 0, 0, false, 1000000, 1000000, 0, 0, 0, 0, 0));
-         countries.Add(new Country(1, "Kissala", neighbourIds, 0, 0, 0, 0, 0, false, 1000, 1000, 0, 0, 0, 0, 0));
-         countries.Add(new Country(2, "Turuk", neighbourIds, 0, 0, 0, 0, 0, false, 7000, 7000, 0, 0, 0, 0, 0));
-         */
+      
     }
 
 
@@ -88,12 +81,6 @@ public class Country : MonoBehaviour
 
     void SpreadOutside()
     {
-
-        /*   foreach (float neighbour in neighbourIds)
-           {
-               neighbourCount++;
-           }
-           */
         int neighbourRoll = Random.Range(0, neighbourIds.Count);
 
         float plagueOutsideChance = GameObject.Find("asia").GetComponent<Plague>().outsideChance;
