@@ -11,7 +11,6 @@ public class Transpoerts : MonoBehaviour
     public float traffic;
     public float infectMultiplier;
     public float outsidespread;
-    public float transportCountryId;
     public List<float> TransportIDs = new List<float>();
 
     void TravellingInfect()

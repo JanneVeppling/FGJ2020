@@ -6,7 +6,7 @@ public class Country : MonoBehaviour
 {
 
 
-    public float id;
+    public int id;
     public string worldName;
     public List<float> neighbourIds = new List<float>();
     public float neighbourCount = 0;
@@ -28,22 +28,6 @@ public class Country : MonoBehaviour
     public float numberOfTransports;
 
     public float sentVaccinessPerSent;
-
-    void Start()
-    {
-      
-    }
-
-
-    void Awake()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
 
     void SpreadInside()
     {
@@ -135,6 +119,10 @@ public class Country : MonoBehaviour
 
     void OnMouseDown()
     {
-        GameObject.Find("GameController").GetComponent<UIController>().SetUI(worldName, populationTotal, numberOfHealthy, numberOfInfected, numberOfDeah, numberOfVaccinated);
+        if (gameObject.CompareTag("Country"))
+        {
+            GameObject.Find("GameController").GetComponent<UIController>().SetUI(worldName, populationTotal, numberOfHealthy, numberOfInfected, numberOfDeah, numberOfVaccinated);
+            GameObject.Find("GameController").GetComponent<Player>().currentSelecetedWorld = id;
+        }
     }
 }
