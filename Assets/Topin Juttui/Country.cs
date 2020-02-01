@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Country : MonoBehaviour
 {
-    private Plague plague;
+   
 
     public float id;
     public string worldName;
@@ -35,25 +35,21 @@ public class Country : MonoBehaviour
     void Start()
     {
         //Idea toistaiseksi paussilla
-       /* countries.Add(new Country(0, "World", neighbourIds, 0, 0, 0, 0, 0, false, 1000000, 1000000, 0, 0, 0, 0, 0));
-        countries.Add(new Country(1, "Kissala", neighbourIds, 0, 0, 0, 0, 0, false, 1000, 1000, 0, 0, 0, 0, 0));
-        countries.Add(new Country(2, "Turuk", neighbourIds, 0, 0, 0, 0, 0, false, 7000, 7000, 0, 0, 0, 0, 0));
-        */
+        /* countries.Add(new Country(0, "World", neighbourIds, 0, 0, 0, 0, 0, false, 1000000, 1000000, 0, 0, 0, 0, 0));
+         countries.Add(new Country(1, "Kissala", neighbourIds, 0, 0, 0, 0, 0, false, 1000, 1000, 0, 0, 0, 0, 0));
+         countries.Add(new Country(2, "Turuk", neighbourIds, 0, 0, 0, 0, 0, false, 7000, 7000, 0, 0, 0, 0, 0));
+         */
     }
 
 
     void Awake()
-    {
-        
-        plague = GetComponent<Plague>();
-
-
+    {    
         foreach (float neighbour in neighbourIds)
         {
             neighbourCount++;
+          
 
         }
-
     }
 
     void Update()
@@ -63,9 +59,9 @@ public class Country : MonoBehaviour
 
     void SpreadInside()
     {
-        float plagueInsideChance = plague.insideChance;
-
-        float  currenteHealthPercent = (numberOfHealthy / populationTotal) * 100f;
+        float plagueInsideChance = GameObject.Find("asia").GetComponent<Plague>().insideChance;
+        
+        float currenteHealthPercent = (numberOfHealthy / populationTotal) * 100f;
 
         if (currenteHealthPercent > 98 || currenteHealthPercent < 2) percentageMultiplier = 0.2f;
         else if (currenteHealthPercent > 95 & currenteHealthPercent < 98 || currenteHealthPercent > 2 & currenteHealthPercent < 5) percentageMultiplier = 0.4f;
@@ -89,27 +85,25 @@ public class Country : MonoBehaviour
 
                 infectedPeople = (infectedPeople + infectedRoll) * infectedpercentageincrease;
                 
-
                 numberOfHealthy = numberOfHealthy - infectedPeople;
                 numberOfInfected = numberOfInfected + infectedPeople;
             }
-
-        }
+       }
     }
 
     void SpreadOutside()
     {
-        float neighbourRoll =(float) Random.Range(0, neighbourIds.Count);
+        int neighbourRoll =Random.Range(0, neighbourIds.Count);
 
+        float plagueOutsideChance = GameObject.Find("asia").GetComponent<Plague>().outsideChance;
 
-        float plagueOutsideChance = plague.outsideChance;
+        float healthy = GameObject.Find("asia" + neighbourRoll).GetComponent<Country>().numberOfHealthy;
 
-        if (neighbourIds[neighbourRoll].numberOfHealthy <= 0f) //NeighbourID numberofhealthy
+        if (healthy <= 0f) //NeighbourID numberofhealthy
         {
            
             float currenteHealthPercent = (numberOfHealthy / populationTotal) * 100f;
-
-           
+      
             if (currenteHealthPercent > 98 || currenteHealthPercent < 2) percentageMultiplier = 0.2f;
             else if (currenteHealthPercent > 95 & currenteHealthPercent < 98 || currenteHealthPercent > 2 & currenteHealthPercent < 5) percentageMultiplier = 0.4f;
             else if (currenteHealthPercent > 85 & currenteHealthPercent < 95 || currenteHealthPercent > 5 & currenteHealthPercent < 15) percentageMultiplier = 0.6f;
@@ -118,8 +112,7 @@ public class Country : MonoBehaviour
             else if (currenteHealthPercent > 50 & currenteHealthPercent < 60 || currenteHealthPercent > 40 & currenteHealthPercent < 50) percentageMultiplier = 1.8f;
 
 
-
-            float chanceRoll = Random.Range(0.0f, 100.0f);
+           float chanceRoll = Random.Range(0.0f, 100.0f);
 
             float infectChance = outsideSpreadChance * plagueOutsideChance * tourism * percentageMultiplier;
 
@@ -134,16 +127,11 @@ public class Country : MonoBehaviour
 
                 infectedPeople = infectedPeople + infectedRoll;
 
-
-                neighbourIds[neighbourRoll].numberOfHealthy = numberOfHealthy - infectedPeople;
-                neighbourIds[neighbourRoll].numberOfInfected = numberOfInfected + infectedPeople;
-
+                 GameObject.Find("asia" + neighbourRoll).GetComponent<Country>().numberOfHealthy -=  infectedPeople;
+                 GameObject.Find("asia" + neighbourRoll).GetComponent<Country>().numberOfInfected += infectedPeople;
             }
         }
-
     }
-
-
     void OnMouseDown()
     {
         GameObject.Find("GameController").GetComponent<UIController>().SetUI(populationTotal, numberOfHealthy, numberOfInfected, numberOfDeah, numberOfVaccinated);
