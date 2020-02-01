@@ -6,12 +6,13 @@ public class Country : MonoBehaviour
 {
     private Plague plague;
 
-    public int id;
+    public float id;
     public string worldName;
-    public List<int> neighbourIds = new List<int>();
-    float outsideSpreadChance;
-    float insideSpreadChance;
-    float percentageMultiplier = 1f;
+    public List<float> neighbourIds = new List<float>();
+    public float neighbourCount = 0;
+    public float outsideSpreadChance;
+    public float insideSpreadChance;
+    public float percentageMultiplier = 1f;
 
 
     public float wealth;   // 0.5 to 2?
@@ -19,14 +20,14 @@ public class Country : MonoBehaviour
     public float tourism;  // 0.5 to 2?
     public bool EU;
 
-    public int populationTotal;
-    public int numberOfHealthy;
-    public int numberOfInfected;
-    public int numberOfDeah;
-    public int numberOfVaccinated;
-    public int numberOfTransports;
+    public float populationTotal;
+    public float numberOfHealthy;
+    public float numberOfInfected;
+    public float numberOfDeah;
+    public float numberOfVaccinated;
+    public float numberOfTransports;
 
-    public int sentVaccinessPerSent;
+    public float sentVaccinessPerSent;
 
 
     //public List<Country> countries = new List<Country>();
@@ -43,7 +44,18 @@ public class Country : MonoBehaviour
 
     void Awake()
     {
+        
         plague = GetComponent<Plague>();
+<<<<<<< HEAD
+=======
+
+        foreach (float neighbour in neighbourIds)
+        {
+            neighbourCount++;
+
+        }
+
+>>>>>>> fdf663d2e5a8e27537d6d477c69ff5ef4040a840
     }
 
     void Update()
@@ -64,7 +76,8 @@ public class Country : MonoBehaviour
         else if (currenteHealthPercent > 60 & currenteHealthPercent < 70 || currenteHealthPercent > 30 & currenteHealthPercent < 40) percentageMultiplier = 1.3f;
         else if (currenteHealthPercent > 50 & currenteHealthPercent < 60 || currenteHealthPercent > 40 & currenteHealthPercent < 50) percentageMultiplier = 1.8f;
 
-        if (numberOfHealthy <= 0)
+
+        if (numberOfHealthy <= 0f)
         {
             float chanceRoll = Random.Range(0.0f, 100.0f);
 
@@ -72,10 +85,11 @@ public class Country : MonoBehaviour
 
             if (infectChance > chanceRoll)
             {
-                int infectedRoll = (Random.Range(20, 400));
-                float infectedPeopleF = (numberOfHealthy / 100 * infectChance) * percentageMultiplier;
-                int infectedPeople = (int)infectedPeopleF;
-                infectedPeople = infectedPeople + infectedRoll;
+                float infectedRoll = (Random.Range(10f, 100f));
+                float infectedPeople = (numberOfHealthy / 100 * infectChance) * percentageMultiplier;
+                float infectedpercentageincrease =  1 + (numberOfInfected / populationTotal); //multiplier based on % of infected people
+
+                infectedPeople = (infectedPeople + infectedRoll) * infectedpercentageincrease;
                 
 
                 numberOfHealthy = numberOfHealthy - infectedPeople;
@@ -87,12 +101,14 @@ public class Country : MonoBehaviour
 
     void SpreadOutside()
     {
+        float neighbourRoll =(float) Random.Range(0, neighbourIds.Count);
+
 
         float plagueOutsideChance = plague.outsideChance;
 
-        if (numberOfHealthy <= 0) //NeighbourID numberofhealthy
+        if (neighbourIds[neighbourRoll].numberOfHealthy <= 0f) //NeighbourID numberofhealthy
         {
-            //muuta kaikki neighborin alle
+           
             float currenteHealthPercent = (numberOfHealthy / populationTotal) * 100f;
 
            
@@ -111,22 +127,29 @@ public class Country : MonoBehaviour
 
             if (infectChance > chanceRoll)
             {
-                //kaikki muuttujat neighbour.id jutun alle!!
-                int infectedRoll = (Random.Range(2, 100));
-                float infectedPeopleF = (numberOfHealthy / 200 * infectChance) * percentageMultiplier;
-                int infectedPeople = (int)infectedPeopleF;
-                infectedPeople = infectedPeople + infectedRoll;
                 
+                float infectedRoll = (Random.Range(2f, 100f));
+                float infectedPeople = (numberOfHealthy / 200f * infectChance) * percentageMultiplier;
+         
 
-                numberOfHealthy = numberOfHealthy - infectedPeople;
-                numberOfInfected = numberOfInfected + infectedPeople;
+                float infectedpercentageincrease = 1 + (numberOfInfected / populationTotal); //multiplier based on % of infected people
+
+                infectedPeople = infectedPeople + infectedRoll;
+
+
+                neighbourIds[neighbourRoll].numberOfHealthy = numberOfHealthy - infectedPeople;
+                neighbourIds[neighbourRoll].numberOfInfected = numberOfInfected + infectedPeople;
 
             }
         }
 
     }
 
+<<<<<<< HEAD
     void OnMouseDown()
+=======
+    public Country(float id, string worldName, List<float> neighbourIds, float outsideSpreadChance, float insideSpreadChance, float wealth, float density, float tourism, bool eU, float populationTotal, float numberOfHealthy, float numberOfInfected, float numberOfDeah, float numberOfVaccinated, float numberOfTransports, float sentVaccinessPerSent)
+>>>>>>> fdf663d2e5a8e27537d6d477c69ff5ef4040a840
     {
         GameObject.Find("GameController").GetComponent<UIController>().SetUI(populationTotal, numberOfHealthy, numberOfInfected, numberOfDeah, numberOfVaccinated);
     }
