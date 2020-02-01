@@ -10,25 +10,34 @@ public class Plague : MonoBehaviour
     public float insideChance;
     public bool airborne;
     float airborneMutationChance;
+    float deathchance;
+    float mutationAcceleration;
 
+    float informationMultiplier;
 
     private void Mutate()
     {
         float chanceRoll = Random.Range(0.0f, 100.0f);
+
+        chanceRoll += (mutationAcceleration);
 
         if (airborneMutationChance >= chanceRoll & airborne == false)
         {
             airborne = true;
             Debug.Log("Airborne mutation");
             outsideChance += 0.5f;
+            
         }
 
         else if (chanceRoll > 90f)
         {
-            Debug.Log("suuri mutattio ");
+            Debug.Log("suuri mutaatio ");
 
             outsideChance += 0.25f;
             insideChance += 0.35f;
+
+            deathchance += 0.02f;
+            mutationAcceleration += 2f;
         }
 
 
@@ -36,10 +45,14 @@ public class Plague : MonoBehaviour
         {
             outsideChance += 0.1f;
             insideChance += 0.15f;
+            mutationAcceleration += 0.5f;
 
-            Debug.Log("Pieni mutattio ");
+
+            Debug.Log("Pieni mutaatio ");
         }
     }
+
+
 
 
 
