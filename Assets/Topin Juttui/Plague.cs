@@ -24,13 +24,13 @@ public class Plague : MonoBehaviour
         if (airborneMutationChance >= chanceRoll & airborne == false)
         {
             airborne = true;
-            Debug.Log("Airborne mutation");
+           // Debug.Log("Airborne mutation");
             outsideChance += 0.5f;         
         }
 
         else if (chanceRoll > 90f)
         {
-            Debug.Log("suuri mutaatio ");
+         //   Debug.Log("suuri mutaatio ");
 
             outsideChance += 0.15f;
             insideChance += 0.15f;
@@ -47,7 +47,7 @@ public class Plague : MonoBehaviour
             mutationAcceleration += 0.5f;
             deathchance += 0.01f;
 
-            Debug.Log("Pieni mutaatio ");
+          //  Debug.Log("Pieni mutaatio ");
         }
     }
 
