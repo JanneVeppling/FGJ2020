@@ -111,9 +111,9 @@ public class Country : MonoBehaviour
                 float infectedPeople = (numberOfHealthy / 200f * infectChance) * percentageMultiplier;
 
 
-                float infectedpercentageincrease = 1 + (numberOfInfected / populationTotal); //multiplier based on % of infected people
+              
 
-                infectedPeople = infectedPeople + (infectedRoll * infectedpercentageincrease) ;
+                infectedPeople = infectedPeople + infectedRoll ;
 
                 GameObject.Find("asia" + neighbourRoll).GetComponent<Country>().numberOfHealthy -= infectedPeople;
                 GameObject.Find("asia" + neighbourRoll).GetComponent<Country>().numberOfInfected += infectedPeople;
@@ -122,13 +122,15 @@ public class Country : MonoBehaviour
     }
     public void DeathChance()
     {
-       float deathchance = GameObject.Find("asia").GetComponent<Plague>().deathchance;
+              
+       float deathchance = (GameObject.Find("asia").GetComponent<Plague>().deathchance * (Random.Range(0f, 200f)/100));
 
-        float deadpeople;
+        float deadpeople= 0f;
        deadpeople = numberOfInfected * deathchance;
 
         numberOfInfected -= deadpeople;
         numberOfDeah += deadpeople;
+        Debug.Log(deadpeople + "has died");
     }
 
     void OnMouseDown()

@@ -7,14 +7,12 @@ public class Transpoerts : MonoBehaviour
     private Country country;
 
     public int id;
+    public float transportCountryId;
     public float traffic;
     public float infectMultiplier;
     public float outsidespread;
     public float transportCountryId;
     public List<float> TransportIDs = new List<float>();
-
-
-
 
     void TravellingInfect()
     {
@@ -23,14 +21,13 @@ public class Transpoerts : MonoBehaviour
 
         float chanceRoll = Random.Range(0.0f, 100.0f);
 
-        outsidespread = GetComponent<Country>().outsideSpreadChance;
+        outsidespread = GameObject.Find("asia" + transportCountryId).GetComponent<Country>().outsideSpreadChance * GameObject.Find("asia").GetComponent<Plague>().outsideChance;
 
-        float travelChance = outsidespread * infectMultiplier;
+
+        float travelChance = outsidespread * infectMultiplier * traffic;
 
         if (chanceRoll < travelChance)
         {
-
-
             int transportroll = Random.Range(0, transports.Length);
 
             float countryId = GameObject.Find("transport" + transportroll).GetComponent<Transpoerts>().transportCountryId;
@@ -39,7 +36,7 @@ public class Transpoerts : MonoBehaviour
 
             GameObject.Find("asia" + countryId).GetComponent<Country>().numberOfHealthy -= infectedRoll;
             GameObject.Find("asia" + countryId).GetComponent<Country>().numberOfInfected += infectedRoll;
-            Debug.Log("joku oksensi koneessa ");
+            Debug.Log("joku oksensi koneessa");
 
         }
     }
