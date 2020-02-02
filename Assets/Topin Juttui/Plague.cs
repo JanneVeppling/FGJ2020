@@ -20,7 +20,7 @@ public class Plague : MonoBehaviour
 
       
 
-         if (chanceRoll > 90f)
+         if (chanceRoll > 90.0f)
         {
             Debug.Log("suuri mutaatio ");
 
@@ -34,10 +34,10 @@ public class Plague : MonoBehaviour
         }
 
 
-        else if (chanceRoll > 65f)
+        else if (chanceRoll > 65.0f)
         {
-            outsideChance += 0.02f;
-            insideChance += 0.05f;
+            outsideChance += 0.01f;
+            insideChance += 0.02f;
            // mutationAcceleration += 0.5f;
             //deathchance += 0.005f;
 

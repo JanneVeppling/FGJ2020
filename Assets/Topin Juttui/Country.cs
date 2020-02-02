@@ -29,6 +29,7 @@ public class Country : MonoBehaviour
     int mutacounter = 0;
     public float sentVaccinessPerSent;
 
+    public float deathtime = 30.0f;
 
     public float targetTime = 10.0f;
 
@@ -41,23 +42,27 @@ public class Country : MonoBehaviour
     void Update()
     {
             targetTime -= Time.deltaTime;
+           deathtime -= Time.deltaTime;
 
-            if (targetTime <= 0.0f)
+        if (targetTime <= 0.0f)
             {
 
             SpreadInside();
             SpreadOutside();
-            DeathChance();
+         
             
 
 
            //  GameObject.Find("Maa" + id).GetComponent<Transpoerts>().TravellingInfect();
-            this.gameObject.GetComponent<Transpoerts > ().TravellingInfect();
+            this.gameObject.GetComponent<Transpoerts> ().TravellingInfect();
             if (mutacounter == 1) mutacounter = 0;   
             else GameObject.Find("GameController").GetComponent<Plague>().Mutate();
             
               targetTime = 1.3f;         
         }
+
+        if (deathtime <= 0.0f) DeathChance(); 
+
     }
 
 
