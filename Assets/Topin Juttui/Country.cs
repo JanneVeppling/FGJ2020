@@ -62,7 +62,7 @@ public class Country : MonoBehaviour
         if (deathtime <= 0.0f)
         {
             DeathChance();
-            deathtime = 8.0f;
+            deathtime = 6.0f;
         }
 
         if(numberOfInfected >= 1 && firstInfect == false)

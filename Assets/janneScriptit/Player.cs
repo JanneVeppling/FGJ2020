@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
         {
             if (passiveIncome == 10)
             {
-                passiveIncome += 10;
+                passiveIncome += 20;
                 totalFunds -= 500;
                 MB2.SetActive(true);
                 MT2.SetActive(true);
@@ -86,9 +86,9 @@ public class Player : MonoBehaviour
     {
         if (totalFunds >= 2000)
         {
-            if (passiveIncome == 20)
+            if (passiveIncome == 30)
             {
-                passiveIncome += 10;
+                passiveIncome += 50;
                 totalFunds -= 2000;
                 MB3.SetActive(true);
                 MT3.SetActive(true);
@@ -100,9 +100,9 @@ public class Player : MonoBehaviour
     { 
         if (totalFunds >= 10000)
         {
-            if (passiveIncome == 30)
+            if (passiveIncome == 80)
             {
-                passiveIncome += 10;
+                passiveIncome += 100;
                 totalFunds -= 10000;
             }
         }
