@@ -19,7 +19,7 @@ public class Transpoerts : MonoBehaviour
         GameObject[] transports;
         transports = GameObject.FindGameObjectsWithTag("Maa");
 
-        float chanceRoll = Random.Range(0.0f, 100.0f);
+        float chanceRoll = Random.Range(0.0f, 50.0f);
 
         outsidespread = GameObject.Find("Maa" + transportCountryId).GetComponent<Country>().outsideSpreadChance * GameObject.Find("asia").GetComponent<Plague>().outsideChance;
 

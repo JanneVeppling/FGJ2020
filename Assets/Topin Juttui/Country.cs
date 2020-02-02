@@ -15,18 +15,18 @@ public class Country : MonoBehaviour
     public float percentageMultiplier = 1f;
 
 
-    public float wealth;   // 0.5 to 2?
-    public float density;  // 0.5 to 2?
-    public float tourism;  // 0.5 to 2?
+    public float wealth = 1;   // 0.5 to 2?
+    public float density = 1;  // 0.5 to 2?
+    public float tourism = 1;  // 0.5 to 2?
      bool EU;
 
     public float populationTotal;
-    public float numberOfHealthy;
-    public float numberOfInfected;
-    public float numberOfDeah;
-    public float numberOfVaccinated;
-    public float numberOfTransports;
-
+    public int numberOfHealthy;
+    public int numberOfInfected;
+    public int numberOfDeah;
+    public int numberOfVaccinated;
+    public int numberOfTransports;
+    int mutacounter = 0;
     public float sentVaccinessPerSent;
 
 
@@ -47,14 +47,17 @@ public class Country : MonoBehaviour
 
             SpreadInside();
             SpreadOutside();
-           // DeathChance();
+            DeathChance();
 
-            GameObject.Find("GameController").GetComponent<Plague>().Mutate();
            
 
-              targetTime = 1.0f;
-            Debug.Log("Ajastin JOKA EI TOIMI");
+            if (mutacounter == 1) mutacounter = 0;   
+            else GameObject.Find("GameController").GetComponent<Plague>().Mutate();
+            
 
+
+
+              targetTime = 1.5f;         
         }
     }
 
@@ -62,44 +65,61 @@ public class Country : MonoBehaviour
     void SpreadInside()
     {
         float plagueInsideChance = GameObject.Find("GameController").GetComponent<Plague>().insideChance;
+ 
 
         float currenteHealthPercent = (numberOfHealthy / populationTotal) * 100f;
+        //Debug.Log( numberOfHealthy + " " + populationTotal + " " + currenteHealthPercent + "persentti");
+
 
         if (currenteHealthPercent > 98 || currenteHealthPercent < 2) percentageMultiplier = 0.2f;
-        else if (currenteHealthPercent > 95 & currenteHealthPercent < 98 || currenteHealthPercent > 2 & currenteHealthPercent < 5) percentageMultiplier = 0.4f;
-        else if (currenteHealthPercent > 85 & currenteHealthPercent < 95 || currenteHealthPercent > 5 & currenteHealthPercent < 15) percentageMultiplier = 0.6f;
-        else if (currenteHealthPercent > 70 & currenteHealthPercent < 85 || currenteHealthPercent > 15 & currenteHealthPercent < 30) percentageMultiplier = 1.0f;
-        else if (currenteHealthPercent > 60 & currenteHealthPercent < 70 || currenteHealthPercent > 30 & currenteHealthPercent < 40) percentageMultiplier = 1.2f;
-        else if (currenteHealthPercent > 50 & currenteHealthPercent < 60 || currenteHealthPercent > 40 & currenteHealthPercent < 50) percentageMultiplier = 1.5f;
+        else if (currenteHealthPercent > 95 & currenteHealthPercent < 98 || currenteHealthPercent > 2 & currenteHealthPercent < 5) percentageMultiplier = 0.2f;
+        else if (currenteHealthPercent > 85 & currenteHealthPercent < 95 || currenteHealthPercent > 5 & currenteHealthPercent < 15) percentageMultiplier = 0.4f;
+        else if (currenteHealthPercent > 70 & currenteHealthPercent < 85 || currenteHealthPercent > 15 & currenteHealthPercent < 30) percentageMultiplier = 0.7f;
+        else if (currenteHealthPercent > 60 & currenteHealthPercent < 70 || currenteHealthPercent > 30 & currenteHealthPercent < 40) percentageMultiplier = 1.0f;
+        else if (currenteHealthPercent > 50 & currenteHealthPercent < 60 || currenteHealthPercent > 40 & currenteHealthPercent < 50) percentageMultiplier = 1.2f;
+     
 
-        Debug.Log(numberOfHealthy + "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
 
         if (numberOfHealthy >= 0f)
         {
-            float chanceRoll = Random.Range(0.0f, 100.0f);
+            float chanceRoll = Random.Range(0.0f, 10.0f);
 
-            float infectChance = insideSpreadChance * plagueInsideChance * density * percentageMultiplier;
+            float infectChance = insideSpreadChance * plagueInsideChance * density * percentageMultiplier * 2 ;
+
+          
 
             if (infectChance > chanceRoll)
             {
-                float infectedRoll = (Random.Range(1f, 10f));
-                float infectedPeople = (numberOfHealthy / 300 * infectChance) * percentageMultiplier;
+                int infectedRoll = (Random.Range(1, 10));
+                int infectedPeople = (int)(numberOfHealthy / 400 * infectChance);
                 float infectedpercentageincrease = 1 + (numberOfInfected / populationTotal); //multiplier based on % of infected people
 
-                infectedPeople = (infectedPeople + infectedRoll) * infectedpercentageincrease;
+                infectedPeople = (int)((infectedPeople + infectedRoll) * infectedpercentageincrease);
 
-                int infectedPeople2 = (int)infectedPeople;
-                Debug.Log(infectedPeople2 + " AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-                numberOfHealthy = numberOfHealthy - infectedPeople2;
-                numberOfInfected = numberOfInfected + infectedPeople2;
+             
+           
+
+
+                if (infectedPeople >= numberOfHealthy)
+                {
+                    infectedPeople = numberOfHealthy;
+                 
+
+                }
+
+                numberOfHealthy -=  infectedPeople;
+                numberOfInfected += infectedPeople;
+              
+
             }
         }
     }
 
     void SpreadOutside()
     {
-        int neighbourRoll = Random.Range(0, neighbourIds.Count);
-      //  Debug.Log(neighbourIds.Count + " ASASDASDADAS" );
+        int neighbourRoll = 2;
+          
+    
 
         float plagueOutsideChance = GameObject.Find("GameController").GetComponent<Plague>().outsideChance;
 
@@ -119,40 +139,56 @@ public class Country : MonoBehaviour
             else if (currenteHealthPercent > 50 & currenteHealthPercent < 60 || currenteHealthPercent > 40 & currenteHealthPercent < 50) percentageMultiplier = 1.8f;
 
 
-            float chanceRoll = Random.Range(0.0f, 100.0f);
+            float chanceRoll = Random.Range(0.0f, 10.0f);
 
-            float infectChance = outsideSpreadChance * plagueOutsideChance * tourism * percentageMultiplier;
+            float infectChance = outsideSpreadChance * plagueOutsideChance * tourism * percentageMultiplier *2;
 
             if (infectChance > chanceRoll)
             {
 
-                float infectedRoll = (Random.Range(2f, 100f));
-                float infectedPeople = (numberOfHealthy / 200f * infectChance) * percentageMultiplier;
+                float infectedRoll = (Random.Range(1f, 10f));
+                float infectedPeople = (numberOfHealthy / 400f * infectChance) * percentageMultiplier;
 
 
-              
 
                 infectedPeople = infectedPeople + infectedRoll ;
+
+
+                if (infectedPeople >= GameObject.Find("Maa" + neighbourRoll).GetComponent<Country>().numberOfHealthy)
+                {
+                    infectedPeople = GameObject.Find("Maa" + neighbourRoll).GetComponent<Country>().numberOfHealthy;
+
+
+                }
 
                 int infectedPeople2 = (int)infectedPeople;
 
 
+                Debug.Log(neighbourRoll + "naapurirolli");
                 GameObject.Find("Maa" + neighbourRoll).GetComponent<Country>().numberOfHealthy -= infectedPeople2;
                 GameObject.Find("Maa" + neighbourRoll).GetComponent<Country>().numberOfInfected += infectedPeople2;
+                Debug.Log(GameObject.Find("Maa" + neighbourRoll).GetComponent<Country>().id);
+             
             }
         }
     }
     public void DeathChance()
     {
 
-        float deathchance = (GameObject.Find("GameController").GetComponent<Plague>().deathchance * (Random.Range(0f, 200f) / 100));
+        float deathchance = (GameObject.Find("GameController").GetComponent<Plague>().deathchance);
         Debug.Log(deathchance + " DeathChance juttu");
 
         int deadpeople;
         deadpeople = (int)(numberOfInfected * deathchance);
 
-        if (numberOfInfected > 0)
+
+
+        if (numberOfInfected > 0 & deadpeople > 0)
         { 
+            if (deadpeople > numberOfInfected)
+            {
+                deadpeople = numberOfInfected;
+            }
         numberOfInfected -= deadpeople;
         numberOfDeah += deadpeople;
         Debug.Log(deadpeople + " people has died");

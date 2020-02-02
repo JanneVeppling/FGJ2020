@@ -141,7 +141,7 @@ public class Player : MonoBehaviour
                     }
                     else if (temp >= country.GetComponent<Country>().numberOfInfected)
                     {
-                        float a = temp - country.GetComponent<Country>().numberOfInfected;
+                        int a = temp - country.GetComponent<Country>().numberOfInfected;
                         country.GetComponent<Country>().numberOfVaccinated += temp;
                         country.GetComponent<Country>().numberOfInfected = 0;
                         country.GetComponent<Country>().numberOfHealthy -= a;
