@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public bool readyToSentVaccines;
     public int currentSelecetedWorld;
 
-    public GameObject MB2, MB3, I2, I3, VAC2, VAC3;
+    public GameObject MB2, MB3, I2, I3, VAC2, VAC3, MT2, MT3;
 
     public GameObject[] countries;
 
@@ -41,9 +41,10 @@ public class Player : MonoBehaviour
         if (totalFunds >= 500)
         {
             totalFunds -= 500;
-            vaccinesPerSec = 10000;
+            vaccinesPerSec = 1000;
             readyToSentVaccines = true;
             VAC2.SetActive(true);
+            MT2.SetActive(true);
         }
     }
 
@@ -52,8 +53,9 @@ public class Player : MonoBehaviour
         if (totalFunds >= 2000)
         {
             totalFunds -= 2000;
-            vaccinesPerSec = 50000;
+            vaccinesPerSec = 5000;
             VAC3.SetActive(true);
+            MT3.SetActive(true);
         }
     }
 
@@ -62,7 +64,7 @@ public class Player : MonoBehaviour
         if (totalFunds >= 10000)
         {
             totalFunds -= 10000;
-            vaccinesPerSec = 100000;
+            vaccinesPerSec = 10000;
         }
     }
 
@@ -75,6 +77,7 @@ public class Player : MonoBehaviour
                 passiveIncome += 10;
                 totalFunds -= 500;
                 MB2.SetActive(true);
+                MT2.SetActive(true);
             }
         }
     }
@@ -88,6 +91,7 @@ public class Player : MonoBehaviour
                 passiveIncome += 10;
                 totalFunds -= 2000;
                 MB3.SetActive(true);
+                MT3.SetActive(true);
             }
         }
     }
@@ -112,6 +116,7 @@ public class Player : MonoBehaviour
             gameObject.GetComponent<Plague>().outsideChance *= 0.8f;
             totalFunds -= 500;
             I2.SetActive(true);
+            MT2.SetActive(true);
         }
     }
 
@@ -123,6 +128,7 @@ public class Player : MonoBehaviour
             gameObject.GetComponent<Plague>().outsideChance *= 0.8f;
             totalFunds -= 2000;
             I3.SetActive(true);
+            MT3.SetActive(true);
         }
     }
 
