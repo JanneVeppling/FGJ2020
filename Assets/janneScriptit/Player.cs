@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
         if (totalFunds >= 500)
         {
             totalFunds -= 500;
-            vaccinesPerSec = 1000;
+            vaccinesPerSec = 100;
             readyToSentVaccines = true;
             VAC2.SetActive(true);
             MT2.SetActive(true);
@@ -53,7 +53,7 @@ public class Player : MonoBehaviour
         if (totalFunds >= 2000)
         {
             totalFunds -= 2000;
-            vaccinesPerSec = 5000;
+            vaccinesPerSec = 500;
             VAC3.SetActive(true);
             MT3.SetActive(true);
         }
@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
         if (totalFunds >= 10000)
         {
             totalFunds -= 10000;
-            vaccinesPerSec = 10000;
+            vaccinesPerSec = 1000;
         }
     }
 

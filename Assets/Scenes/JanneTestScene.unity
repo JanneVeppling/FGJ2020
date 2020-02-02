@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 31557020}
   - component: {fileID: 31557023}
   - component: {fileID: 31557024}
+  - component: {fileID: 31557025}
   m_Layer: 0
   m_Name: Maa2
   m_TagString: Country
@@ -304,6 +305,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &31557024
 MonoBehaviour:
@@ -317,6 +319,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &31557025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31557019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
+  transportCountryId: 2
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!114 &39903656 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5652214334375902652, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
@@ -607,6 +627,7 @@ GameObject:
   - component: {fileID: 511513525}
   - component: {fileID: 511513528}
   - component: {fileID: 511513529}
+  - component: {fileID: 511513530}
   m_Layer: 0
   m_Name: Maa19
   m_TagString: Country
@@ -809,6 +830,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &511513529
 MonoBehaviour:
@@ -822,6 +844,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &511513530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511513524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 18
+  transportCountryId: 18
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!1 &540975577 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5652214335937252681, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
@@ -841,6 +881,7 @@ GameObject:
   - component: {fileID: 547401203}
   - component: {fileID: 547401206}
   - component: {fileID: 547401207}
+  - component: {fileID: 547401208}
   m_Layer: 0
   m_Name: Maa21
   m_TagString: Country
@@ -1001,6 +1042,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &547401207
 MonoBehaviour:
@@ -1014,6 +1056,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &547401208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547401202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 20
+  transportCountryId: 20
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!1 &589633080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,6 +1821,7 @@ GameObject:
   - component: {fileID: 1013638555}
   - component: {fileID: 1013638558}
   - component: {fileID: 1013638559}
+  - component: {fileID: 1013638560}
   m_Layer: 0
   m_Name: Maa14
   m_TagString: Country
@@ -2018,6 +2079,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 1
 --- !u!114 &1013638559
 MonoBehaviour:
@@ -2031,6 +2093,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1013638560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013638554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 13
+  transportCountryId: 13
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!1 &1042025380
 GameObject:
   m_ObjectHideFlags: 0
@@ -2623,6 +2703,7 @@ GameObject:
   - component: {fileID: 1187276772}
   - component: {fileID: 1187276775}
   - component: {fileID: 1187276776}
+  - component: {fileID: 1187276777}
   m_Layer: 0
   m_Name: Maa8
   m_TagString: Country
@@ -2782,6 +2863,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &1187276776
 MonoBehaviour:
@@ -2795,6 +2877,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1187276777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187276771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 7
+  transportCountryId: 7
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!1001 &1234469393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3768,6 +3868,7 @@ GameObject:
   - component: {fileID: 1356507896}
   - component: {fileID: 1356507899}
   - component: {fileID: 1356507900}
+  - component: {fileID: 1356507901}
   m_Layer: 0
   m_Name: Maa16
   m_TagString: Country
@@ -3905,6 +4006,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &1356507900
 MonoBehaviour:
@@ -3918,6 +4020,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1356507901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356507895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 15
+  transportCountryId: 15
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!1 &1358602736
 GameObject:
   m_ObjectHideFlags: 0
@@ -3931,6 +4051,7 @@ GameObject:
   - component: {fileID: 1358602737}
   - component: {fileID: 1358602740}
   - component: {fileID: 1358602741}
+  - component: {fileID: 1358602742}
   m_Layer: 0
   m_Name: Maa13
   m_TagString: Country
@@ -4120,6 +4241,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &1358602741
 MonoBehaviour:
@@ -4133,6 +4255,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1358602742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358602736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 12
+  transportCountryId: 12
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!1 &1394478709 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5652214334569421131, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
@@ -4152,6 +4292,7 @@ GameObject:
   - component: {fileID: 1398183464}
   - component: {fileID: 1398183467}
   - component: {fileID: 1398183468}
+  - component: {fileID: 1398183469}
   m_Layer: 0
   m_Name: Maa18
   m_TagString: Country
@@ -4335,6 +4476,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &1398183468
 MonoBehaviour:
@@ -4348,6 +4490,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1398183469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398183463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 17
+  transportCountryId: 17
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!1 &1398632874
 GameObject:
   m_ObjectHideFlags: 0
@@ -4361,6 +4521,7 @@ GameObject:
   - component: {fileID: 1398632875}
   - component: {fileID: 1398632878}
   - component: {fileID: 1398632879}
+  - component: {fileID: 1398632880}
   m_Layer: 0
   m_Name: Maa17
   m_TagString: Country
@@ -4518,6 +4679,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &1398632879
 MonoBehaviour:
@@ -4531,6 +4693,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1398632880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398632874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 16
+  transportCountryId: 16
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!1 &1419025706
 GameObject:
   m_ObjectHideFlags: 0
@@ -4683,6 +4863,7 @@ GameObject:
   - component: {fileID: 1466666250}
   - component: {fileID: 1466666253}
   - component: {fileID: 1466666254}
+  - component: {fileID: 1466666255}
   m_Layer: 0
   m_Name: Maa15
   m_TagString: Country
@@ -4910,6 +5091,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 4
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &1466666254
 MonoBehaviour:
@@ -4923,6 +5105,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1466666255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466666249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 14
+  transportCountryId: 14
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!1 &1522327219
 GameObject:
   m_ObjectHideFlags: 0
@@ -5008,6 +5208,7 @@ GameObject:
   - component: {fileID: 1595753252}
   - component: {fileID: 1595753255}
   - component: {fileID: 1595753256}
+  - component: {fileID: 1595753257}
   m_Layer: 0
   m_Name: Maa20
   m_TagString: Country
@@ -5142,6 +5343,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &1595753256
 MonoBehaviour:
@@ -5155,6 +5357,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1595753257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595753251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 19
+  transportCountryId: 19
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!1 &1667302220
 GameObject:
   m_ObjectHideFlags: 0
@@ -5168,6 +5388,7 @@ GameObject:
   - component: {fileID: 1667302221}
   - component: {fileID: 1667302224}
   - component: {fileID: 1667302225}
+  - component: {fileID: 1667302226}
   m_Layer: 0
   m_Name: Maa11
   m_TagString: Country
@@ -5500,7 +5721,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1667302224
 MonoBehaviour:
@@ -5540,6 +5761,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 5
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &1667302225
 MonoBehaviour:
@@ -5553,6 +5775,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1667302226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667302220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10
+  transportCountryId: 10
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!1 &1686972705
 GameObject:
   m_ObjectHideFlags: 0
@@ -5643,6 +5883,7 @@ GameObject:
   - component: {fileID: 1743830358}
   - component: {fileID: 1743830361}
   - component: {fileID: 1743830362}
+  - component: {fileID: 1743830363}
   m_Layer: 0
   m_Name: Maa9
   m_TagString: Country
@@ -5798,6 +6039,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &1743830362
 MonoBehaviour:
@@ -5811,6 +6053,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1743830363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743830357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 8
+  transportCountryId: 8
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!224 &1748132311 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5652214335227375591, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
@@ -5935,6 +6195,7 @@ GameObject:
   - component: {fileID: 1918610483}
   - component: {fileID: 1918610486}
   - component: {fileID: 1918610487}
+  - component: {fileID: 1918610488}
   m_Layer: 0
   m_Name: Maa12
   m_TagString: Country
@@ -6141,7 +6402,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1918610486
 MonoBehaviour:
@@ -6178,6 +6439,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &1918610487
 MonoBehaviour:
@@ -6191,6 +6453,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1918610488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918610482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 11
+  transportCountryId: 11
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!1 &1930088893
 GameObject:
   m_ObjectHideFlags: 0
@@ -6204,6 +6484,7 @@ GameObject:
   - component: {fileID: 1930088894}
   - component: {fileID: 1930088897}
   - component: {fileID: 1930088898}
+  - component: {fileID: 1930088899}
   m_Layer: 0
   m_Name: Maa4
   m_TagString: Country
@@ -6340,6 +6621,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &1930088898
 MonoBehaviour:
@@ -6353,6 +6635,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1930088899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930088893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 3
+  transportCountryId: 3
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!1 &1931198502 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5652214334615927216, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
@@ -6372,6 +6672,7 @@ GameObject:
   - component: {fileID: 1962860575}
   - component: {fileID: 1962860578}
   - component: {fileID: 1962860579}
+  - component: {fileID: 1962860580}
   m_Layer: 0
   m_Name: Maa10
   m_TagString: Country
@@ -6535,6 +6836,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &1962860579
 MonoBehaviour:
@@ -6548,6 +6850,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1962860580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962860574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 9
+  transportCountryId: 9
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 0
+  TransportIDs: []
 --- !u!1 &1987581276
 GameObject:
   m_ObjectHideFlags: 0
@@ -6561,6 +6881,7 @@ GameObject:
   - component: {fileID: 1987581277}
   - component: {fileID: 1987581280}
   - component: {fileID: 1987581281}
+  - component: {fileID: 1987581282}
   m_Layer: 0
   m_Name: Maa7
   m_TagString: Country
@@ -6715,6 +7036,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &1987581281
 MonoBehaviour:
@@ -6728,6 +7050,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1987581282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987581276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 6
+  transportCountryId: 6
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!1 &2025257097
 GameObject:
   m_ObjectHideFlags: 0
@@ -6741,6 +7081,7 @@ GameObject:
   - component: {fileID: 2025257098}
   - component: {fileID: 2025257101}
   - component: {fileID: 2025257102}
+  - component: {fileID: 2025257103}
   m_Layer: 0
   m_Name: Maa5
   m_TagString: Country
@@ -6958,6 +7299,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &2025257102
 MonoBehaviour:
@@ -6971,6 +7313,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2025257103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025257097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 4
+  transportCountryId: 4
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!1 &2031340685
 GameObject:
   m_ObjectHideFlags: 0
@@ -7139,6 +7499,7 @@ GameObject:
   - component: {fileID: 2067061835}
   - component: {fileID: 2067061838}
   - component: {fileID: 2067061839}
+  - component: {fileID: 2067061840}
   m_Layer: 0
   m_Name: Maa1
   m_TagString: Country
@@ -7594,6 +7955,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 3
 --- !u!114 &2067061839
 MonoBehaviour:
@@ -7607,6 +7969,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2067061840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067061834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1
+  transportCountryId: 1
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []
 --- !u!1 &2095453047
 GameObject:
   m_ObjectHideFlags: 0
@@ -7697,6 +8077,7 @@ GameObject:
   - component: {fileID: 2143445035}
   - component: {fileID: 2143445038}
   - component: {fileID: 2143445039}
+  - component: {fileID: 2143445040}
   m_Layer: 0
   m_Name: Maa6
   m_TagString: Country
@@ -7888,6 +8269,7 @@ MonoBehaviour:
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
+  deathtime: 30
   targetTime: 10
 --- !u!114 &2143445039
 MonoBehaviour:
@@ -7901,3 +8283,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2143445040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143445034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0749e4ead733274eab0adaa99df59d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 5
+  transportCountryId: 5
+  traffic: 1
+  infectMultiplier: 1
+  outsidespread: 1
+  TransportIDs: []

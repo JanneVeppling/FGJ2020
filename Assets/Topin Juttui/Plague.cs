@@ -22,7 +22,7 @@ public class Plague : MonoBehaviour
 
          if (chanceRoll > 90.0f)
         {
-            Debug.Log("suuri mutaatio ");
+            //Debug.Log("suuri mutaatio ");
 
             outsideChance += 0.05f;
             insideChance += 0.05f;

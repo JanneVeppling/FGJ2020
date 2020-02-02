@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Country : MonoBehaviour
 {
-
-
     public int id;
     public string worldName;
     public List<float> neighbourIds = new List<float>();
@@ -18,7 +17,10 @@ public class Country : MonoBehaviour
     public float wealth = 1;   // 0.5 to 2?
     public float density = 1;  // 0.5 to 2?
     public float tourism = 1;  // 0.5 to 2?
-    
+
+    public GameObject SpreadParent;
+    public TextMeshProUGUI SpreadText;
+    private bool firstInfect = false;
 
     public int populationTotal;
     public int numberOfHealthy;
@@ -32,7 +34,6 @@ public class Country : MonoBehaviour
     public float deathtime = 30.0f;
 
     public float targetTime = 10.0f;
-
 
     void Start()
     {
@@ -48,20 +49,29 @@ public class Country : MonoBehaviour
             {
 
             SpreadInside();
-            SpreadOutside();
-         
-            
-
+            SpreadOutside();            
 
            //  GameObject.Find("Maa" + id).GetComponent<Transpoerts>().TravellingInfect();
             this.gameObject.GetComponent<Transpoerts> ().TravellingInfect();
             if (mutacounter == 1) mutacounter = 0;   
             else GameObject.Find("GameController").GetComponent<Plague>().Mutate();
             
-              targetTime = 1.3f;         
+              targetTime = 2f;         
         }
 
-        if (deathtime <= 0.0f) DeathChance(); 
+        if (deathtime <= 0.0f)
+        {
+            DeathChance();
+            deathtime = 8.0f;
+        }
+
+        if(numberOfInfected >= 1 && firstInfect == false)
+        {
+            firstInfect = true;
+            SpreadText.text = ("Disease has spread to " + worldName);
+            SpreadParent.SetActive(true);
+            Invoke("DisSpreText", 5f);
+        }
 
     }
 
@@ -83,7 +93,7 @@ public class Country : MonoBehaviour
         else if (currenteHealthPercent > 50 & currenteHealthPercent < 60 || currenteHealthPercent > 40 & currenteHealthPercent < 50) percentageMultiplier = 1.0f;
 
 
-        if (numberOfHealthy >= 0f)
+        if (numberOfHealthy > 0f)
         {
             float chanceRoll = Random.Range(0.0f, 10.0f);
 
@@ -126,10 +136,10 @@ public class Country : MonoBehaviour
 
         float plagueOutsideChance = GameObject.Find("GameController").GetComponent<Plague>().outsideChance;
 
-        if (id != 3) // koska maata numero 3 ei ole olemassa
+        if (neighbourRoll != 3) // koska maata numero 3 ei ole olemassa
         {
             int healthy = GameObject.Find("Maa" + neighbourRoll).GetComponent<Country>().numberOfHealthy;
-            Debug.Log(healthy + "asdasd");
+          
       
       
 
@@ -183,15 +193,15 @@ public class Country : MonoBehaviour
     {
         int chanceRoll = Random.Range(0, 100);
 
-        if (chanceRoll < 15 )
+        if (chanceRoll < 60 )
         { 
 
         float deathchance = (GameObject.Find("GameController").GetComponent<Plague>().deathchance);
-        Debug.Log(deathchance + " DeathChance juttu");
+        //Debug.Log(deathchance + " DeathChance juttu");
 
         int deadpeople;
-        deadpeople = (int)((numberOfInfected * deathchance * deathchance) + Random.Range(1,5));
-
+        deadpeople = (int)(numberOfInfected * deathchance * deathchance);
+            deadpeople += Random.Range(1, 5);
 
 
         if (numberOfInfected > 0 && deadpeople > 0)
@@ -214,5 +224,10 @@ public class Country : MonoBehaviour
             GameObject.Find("GameController").GetComponent<UIController>().SetUI(worldName, populationTotal, numberOfHealthy, numberOfInfected, numberOfDeah, numberOfVaccinated);
             GameObject.Find("GameController").GetComponent<Player>().currentSelecetedWorld = id;
         }
+    }
+
+    void DisSpreText()
+    {
+        SpreadParent.SetActive(false);
     }
 }

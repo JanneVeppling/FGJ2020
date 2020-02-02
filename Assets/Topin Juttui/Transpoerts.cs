@@ -19,27 +19,24 @@ public class Transpoerts : MonoBehaviour
         GameObject[] transports;
         transports = GameObject.FindGameObjectsWithTag("Country");
 
-        float chanceRoll = Random.Range(0.0f, 25.0f); // sattumanvarainen arvo lähteekö lentokone matkaan sairaiden henkilöiden kanssa
+        float chanceRoll = Random.Range(0.0f, 50.0f);
 
         outsidespread = GameObject.Find("GameController").GetComponent<Plague>().outsideChance;
 
-        
-        // maan turismin vaikutus todennäköisyyteen levittää sairautta joka poistettiin
+
         float travelChance = outsidespread * infectMultiplier * traffic;
-        Debug.Log("joku oksensi koneessa2");
+
         if (chanceRoll < travelChance)
         {
-            int transportroll = Random.Range(1, 21);
-            if (transportroll != 3 ) // syystä X meiltä puuttuu maa numero 3 joten näin säästymme turhilta erroreilta
-            {
-       
+            int transportroll = Random.Range(0, transports.Length);
 
-            int infectedRoll = (Random.Range(1, 10)); //sairaiden määrä
+            float countryId = GameObject.Find("Maa" + transportroll).GetComponent<Country>().id;
 
-            GameObject.Find("Maa" + transportroll).GetComponent<Country>().numberOfHealthy -= infectedRoll;
-            GameObject.Find("Maa" + transportroll).GetComponent<Country>().numberOfInfected += infectedRoll;
-            Debug.Log("joku oksensi koneessa"); // testi toimiiko lentokoneiden kanssa sairauden leviäminen
-            }
+            int infectedRoll = (Random.Range(1, 10));
+
+            GameObject.Find("Maa" + countryId).GetComponent<Country>().numberOfHealthy -= infectedRoll;
+            GameObject.Find("Maa" + countryId).GetComponent<Country>().numberOfInfected += infectedRoll;
+          
         }
     }
 }
