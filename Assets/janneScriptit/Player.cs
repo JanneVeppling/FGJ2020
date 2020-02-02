@@ -140,12 +140,19 @@ public class Player : MonoBehaviour
                         country.GetComponent<Country>().numberOfVaccinated += temp;
                         numOfVaccines -= temp;
                     }
-                    else if (temp >= country.GetComponent<Country>().numberOfInfected)
+                    else if (temp >= country.GetComponent<Country>().numberOfInfected && temp <= country.GetComponent<Country>().numberOfInfected + country.GetComponent<Country>().numberOfHealthy)
                     {
                         int a = temp - country.GetComponent<Country>().numberOfInfected;
                         country.GetComponent<Country>().numberOfVaccinated += temp;
                         country.GetComponent<Country>().numberOfInfected = 0;
                         country.GetComponent<Country>().numberOfHealthy -= a;
+                    }
+                    else if(temp > country.GetComponent<Country>().numberOfInfected + country.GetComponent<Country>().numberOfHealthy)
+                    {
+                        country.GetComponent<Country>().numberOfInfected = 0;
+                        country.GetComponent<Country>().numberOfHealthy = 0;
+                        numOfVaccines -= country.GetComponent<Country>().populationTotal - country.GetComponent<Country>().numberOfDeah;
+                        country.GetComponent<Country>().numberOfVaccinated = country.GetComponent<Country>().populationTotal - country.GetComponent<Country>().numberOfDeah;
                     }
                 }
                 gameObject.GetComponent<UIController>().SetUI(country.GetComponent<Country>().worldName, country.GetComponent<Country>().populationTotal, country.GetComponent<Country>().numberOfHealthy, country.GetComponent<Country>().numberOfInfected, country.GetComponent<Country>().numberOfDeah, country.GetComponent<Country>().numberOfVaccinated);

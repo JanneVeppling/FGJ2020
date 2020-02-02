@@ -133,13 +133,14 @@ GameObject:
   - component: {fileID: 31557021}
   - component: {fileID: 31557020}
   - component: {fileID: 31557023}
+  - component: {fileID: 31557024}
   m_Layer: 0
   m_Name: Maa2
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &31557020
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -292,17 +293,30 @@ MonoBehaviour:
   outsideSpreadChance: 1
   insideSpreadChance: 1
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 1.2
   density: 1
   tourism: 2
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
+--- !u!114 &31557024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31557019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &39903656 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5652214334375902652, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
@@ -586,13 +600,14 @@ GameObject:
   - component: {fileID: 511513526}
   - component: {fileID: 511513525}
   - component: {fileID: 511513528}
+  - component: {fileID: 511513529}
   m_Layer: 0
   m_Name: Maa19
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &511513525
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -777,17 +792,30 @@ MonoBehaviour:
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 1.1
   density: 1.4
   tourism: 1.6
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
+--- !u!114 &511513529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511513524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &547401202
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,13 +828,14 @@ GameObject:
   - component: {fileID: 547401204}
   - component: {fileID: 547401203}
   - component: {fileID: 547401206}
+  - component: {fileID: 547401207}
   m_Layer: 0
   m_Name: Maa21
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &547401203
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -949,17 +978,30 @@ MonoBehaviour:
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 2
   density: 2
   tourism: 2
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
+--- !u!114 &547401207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547401202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &589633080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,13 +1426,14 @@ GameObject:
   - component: {fileID: 1013638556}
   - component: {fileID: 1013638555}
   - component: {fileID: 1013638558}
+  - component: {fileID: 1013638559}
   m_Layer: 0
   m_Name: Maa14
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1013638555
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1630,17 +1673,30 @@ MonoBehaviour:
   outsideSpreadChance: 0
   insideSpreadChance: 1
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 0.8
   density: 1.5
   tourism: 1.7
-  populationTotal: 0
-  numberOfHealthy: 69000
+  populationTotal: 500000
+  numberOfHealthy: 500000
   numberOfInfected: 3
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 1
+--- !u!114 &1013638559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013638554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1042025380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,17 +1723,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042025380}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.49382713, y: 0.49382713, z: 0.49382713}
   m_Children:
   - {fileID: 2095453048}
-  m_Father: {fileID: 1661252655}
-  m_RootOrder: 2
+  m_Father: {fileID: 1748132311}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -861, y: -449}
+  m_AnchoredPosition: {x: -412.8395, y: -402.46912}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1042025382
@@ -2035,7 +2091,7 @@ GameObject:
   - component: {fileID: 1138586112}
   m_Layer: 0
   m_Name: World
-  m_TagString: Country
+  m_TagString: Maapallo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2068,6 +2124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8236ab9c3382cf54b89511b7bc2d720e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  worldName: Total
   population: 0
   healthy: 0
   infected: 0
@@ -2231,13 +2288,14 @@ GameObject:
   - component: {fileID: 1187276773}
   - component: {fileID: 1187276772}
   - component: {fileID: 1187276775}
+  - component: {fileID: 1187276776}
   m_Layer: 0
   m_Name: Maa8
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1187276772
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2358,7 +2416,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1187276775
 MonoBehaviour:
@@ -2379,17 +2437,30 @@ MonoBehaviour:
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 1.1
   density: 2
   tourism: 2
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
+--- !u!114 &1187276776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187276771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1234469393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3287,13 +3358,14 @@ GameObject:
   - component: {fileID: 1356507897}
   - component: {fileID: 1356507896}
   - component: {fileID: 1356507899}
+  - component: {fileID: 1356507900}
   m_Layer: 0
   m_Name: Maa16
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1356507896
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3413,17 +3485,30 @@ MonoBehaviour:
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 0.5
   density: 0.69
   tourism: 0.1
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
+--- !u!114 &1356507900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356507895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1358602736
 GameObject:
   m_ObjectHideFlags: 0
@@ -3436,13 +3521,14 @@ GameObject:
   - component: {fileID: 1358602738}
   - component: {fileID: 1358602737}
   - component: {fileID: 1358602740}
+  - component: {fileID: 1358602741}
   m_Layer: 0
   m_Name: Maa13
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1358602737
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3614,17 +3700,30 @@ MonoBehaviour:
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 1.1
   density: 0.9
   tourism: 1.2
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
+--- !u!114 &1358602741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358602736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1398183463
 GameObject:
   m_ObjectHideFlags: 0
@@ -3637,13 +3736,14 @@ GameObject:
   - component: {fileID: 1398183465}
   - component: {fileID: 1398183464}
   - component: {fileID: 1398183467}
+  - component: {fileID: 1398183468}
   m_Layer: 0
   m_Name: Maa18
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1398183464
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3809,17 +3909,30 @@ MonoBehaviour:
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 1.4
   density: 1.1
   tourism: 1.6
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
+--- !u!114 &1398183468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398183463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1398632874
 GameObject:
   m_ObjectHideFlags: 0
@@ -3832,13 +3945,14 @@ GameObject:
   - component: {fileID: 1398632876}
   - component: {fileID: 1398632875}
   - component: {fileID: 1398632878}
+  - component: {fileID: 1398632879}
   m_Layer: 0
   m_Name: Maa17
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1398632875
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3978,17 +4092,30 @@ MonoBehaviour:
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 2.3
   density: 0.8
   tourism: 0
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
+--- !u!114 &1398632879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398632874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1419025706
 GameObject:
   m_ObjectHideFlags: 0
@@ -4015,18 +4142,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419025706}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.49382713, y: 0.49382713, z: 0.49382713}
   m_Children:
   - {fileID: 589633081}
   - {fileID: 1686972706}
-  m_Father: {fileID: 1661252655}
-  m_RootOrder: 3
+  m_Father: {fileID: 1748132311}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -650, y: -463}
+  m_AnchoredPosition: {x: -308.64197, y: -409.3827}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1419025708
@@ -4140,13 +4267,14 @@ GameObject:
   - component: {fileID: 1466666251}
   - component: {fileID: 1466666250}
   - component: {fileID: 1466666253}
+  - component: {fileID: 1466666254}
   m_Layer: 0
   m_Name: Maa15
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1466666250
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4356,17 +4484,30 @@ MonoBehaviour:
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 1.1
   density: 1.1
   tourism: 1.1
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
+--- !u!114 &1466666254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466666249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1522327219
 GameObject:
   m_ObjectHideFlags: 0
@@ -4445,13 +4586,14 @@ GameObject:
   - component: {fileID: 1595753253}
   - component: {fileID: 1595753252}
   - component: {fileID: 1595753255}
+  - component: {fileID: 1595753256}
   m_Layer: 0
   m_Name: Maa20
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1595753252
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4568,23 +4710,30 @@ MonoBehaviour:
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 1
   density: 2
   tourism: 2
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
---- !u!224 &1661252655 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5652214335211156948, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
-    type: 3}
-  m_PrefabInstance: {fileID: 1234469393}
+--- !u!114 &1595753256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595753251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1667302220
 GameObject:
   m_ObjectHideFlags: 0
@@ -4597,13 +4746,14 @@ GameObject:
   - component: {fileID: 1667302222}
   - component: {fileID: 1667302221}
   - component: {fileID: 1667302224}
+  - component: {fileID: 1667302225}
   m_Layer: 0
   m_Name: Maa11
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1667302221
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4929,7 +5079,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1667302224
 MonoBehaviour:
@@ -4958,17 +5108,30 @@ MonoBehaviour:
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 0.7
   density: 1.8
   tourism: 0.1
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
+--- !u!114 &1667302225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667302220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1686972705
 GameObject:
   m_ObjectHideFlags: 0
@@ -5058,13 +5221,14 @@ GameObject:
   - component: {fileID: 1743830359}
   - component: {fileID: 1743830358}
   - component: {fileID: 1743830361}
+  - component: {fileID: 1743830362}
   m_Layer: 0
   m_Name: Maa9
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1743830358
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5202,17 +5366,30 @@ MonoBehaviour:
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 0.8
   density: 1
   tourism: 1.9
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
+--- !u!114 &1743830362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743830357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1748132311 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5652214335227375591, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
@@ -5254,7 +5431,7 @@ MonoBehaviour:
   totalFunds: 100
   passiveIncome: 1
   vaccinesPerSec: 0
-  numOfVaccines: 0
+  numOfVaccines: 1e+11
   readyToSentVaccines: 0
   currentSelecetedWorld: 0
   countries: []
@@ -5311,6 +5488,7 @@ MonoBehaviour:
   money: {fileID: 915429182}
   sendInput: {fileID: 1686972707}
   UpgradeMenu: {fileID: 1931198502}
+  countries: []
 --- !u!1 &1918610482
 GameObject:
   m_ObjectHideFlags: 0
@@ -5323,13 +5501,14 @@ GameObject:
   - component: {fileID: 1918610484}
   - component: {fileID: 1918610483}
   - component: {fileID: 1918610486}
+  - component: {fileID: 1918610487}
   m_Layer: 0
   m_Name: Maa12
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1918610483
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5529,7 +5708,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1918610486
 MonoBehaviour:
@@ -5555,17 +5734,30 @@ MonoBehaviour:
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 0.4
   density: 0.5
   tourism: 0.6
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
+--- !u!114 &1918610487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918610482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1930088893
 GameObject:
   m_ObjectHideFlags: 0
@@ -5578,13 +5770,14 @@ GameObject:
   - component: {fileID: 1930088895}
   - component: {fileID: 1930088894}
   - component: {fileID: 1930088897}
+  - component: {fileID: 1930088898}
   m_Layer: 0
   m_Name: Maa4
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1930088894
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5703,17 +5896,30 @@ MonoBehaviour:
   outsideSpreadChance: 1
   insideSpreadChance: 1
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 0.3
   density: 1.5
   tourism: 0.2
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
+--- !u!114 &1930088898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930088893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1931198502 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5652214334615927216, guid: 44b0c8d6571611b49a2ad1dff0bd5794,
@@ -5732,13 +5938,14 @@ GameObject:
   - component: {fileID: 1962860576}
   - component: {fileID: 1962860575}
   - component: {fileID: 1962860578}
+  - component: {fileID: 1962860579}
   m_Layer: 0
   m_Name: Maa10
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1962860575
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5884,17 +6091,30 @@ MonoBehaviour:
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 1.7
   density: 1
   tourism: 1.7
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
+--- !u!114 &1962860579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962860574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1987581276
 GameObject:
   m_ObjectHideFlags: 0
@@ -5907,13 +6127,14 @@ GameObject:
   - component: {fileID: 1987581278}
   - component: {fileID: 1987581277}
   - component: {fileID: 1987581280}
+  - component: {fileID: 1987581281}
   m_Layer: 0
   m_Name: Maa7
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1987581277
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6026,7 +6247,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1987581280
 MonoBehaviour:
@@ -6050,17 +6271,30 @@ MonoBehaviour:
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 2
   density: 0.3
   tourism: 0.3
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
+--- !u!114 &1987581281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987581276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2025257097
 GameObject:
   m_ObjectHideFlags: 0
@@ -6073,13 +6307,14 @@ GameObject:
   - component: {fileID: 2025257099}
   - component: {fileID: 2025257098}
   - component: {fileID: 2025257101}
+  - component: {fileID: 2025257102}
   m_Layer: 0
   m_Name: Maa5
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &2025257098
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6279,17 +6514,30 @@ MonoBehaviour:
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 0.2
   density: 1.3
   tourism: 1.7
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
+--- !u!114 &2025257102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025257097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2067061834
 GameObject:
   m_ObjectHideFlags: 0
@@ -6302,6 +6550,7 @@ GameObject:
   - component: {fileID: 2067061836}
   - component: {fileID: 2067061835}
   - component: {fileID: 2067061838}
+  - component: {fileID: 2067061839}
   m_Layer: 0
   m_Name: Maa1
   m_TagString: Country
@@ -6746,17 +6995,30 @@ MonoBehaviour:
   outsideSpreadChance: 1
   insideSpreadChance: 1
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 1
   density: 1
   tourism: 1
-  populationTotal: 500000
-  numberOfHealthy: 400000
+  populationTotal: 0
+  numberOfHealthy: 499900
   numberOfInfected: 100
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 3
+--- !u!114 &2067061839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067061834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2095453047
 GameObject:
   m_ObjectHideFlags: 0
@@ -6825,7 +7087,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Send nudes
+  m_Text: Send Vacciness
 --- !u!222 &2095453050
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6846,13 +7108,14 @@ GameObject:
   - component: {fileID: 2143445036}
   - component: {fileID: 2143445035}
   - component: {fileID: 2143445038}
+  - component: {fileID: 2143445039}
   m_Layer: 0
   m_Name: Maa6
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &2143445035
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7026,14 +7289,27 @@ MonoBehaviour:
   outsideSpreadChance: 0
   insideSpreadChance: 0
   percentageMultiplier: 1
+  currenteHealthPercent: 0
   wealth: 1.7
   density: 1
   tourism: 0.2
   populationTotal: 0
-  numberOfHealthy: 0
+  numberOfHealthy: 500000
   numberOfInfected: 0
   numberOfDeah: 0
   numberOfVaccinated: 0
   numberOfTransports: 0
   sentVaccinessPerSent: 0
   targetTime: 10
+--- !u!114 &2143445039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143445034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495587c18e952484cabb0bd9c359b032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

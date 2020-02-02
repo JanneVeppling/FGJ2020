@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Country
   - asia
+  - Maapallo
   layers:
   - Default
   - TransparentFX

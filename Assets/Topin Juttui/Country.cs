@@ -13,14 +13,14 @@ public class Country : MonoBehaviour
     public float outsideSpreadChance = 1.2f;
     public float insideSpreadChance = 1f;
     public float percentageMultiplier = 1f;
-
+    public float currenteHealthPercent;
 
     public float wealth = 1;   // 0.5 to 2?
     public float density = 1;  // 0.5 to 2?
     public float tourism = 1;  // 0.5 to 2?
      bool EU;
 
-    public float populationTotal;
+    public int populationTotal;
     public int numberOfHealthy;
     public int numberOfInfected;
     public int numberOfDeah;
@@ -45,18 +45,13 @@ public class Country : MonoBehaviour
             if (targetTime <= 0.0f)
             {
 
+            DeathChance();
             SpreadInside();
             SpreadOutside();
-            DeathChance();
-
-           
-
+       
             if (mutacounter == 1) mutacounter = 0;   
             else GameObject.Find("GameController").GetComponent<Plague>().Mutate();
             
-
-
-
               targetTime = 1.5f;         
         }
     }
@@ -67,16 +62,16 @@ public class Country : MonoBehaviour
         float plagueInsideChance = GameObject.Find("GameController").GetComponent<Plague>().insideChance;
  
 
-        float currenteHealthPercent = (numberOfHealthy / populationTotal) * 100f;
+        currenteHealthPercent = (numberOfHealthy / populationTotal) * 100f;
         //Debug.Log( numberOfHealthy + " " + populationTotal + " " + currenteHealthPercent + "persentti");
 
 
-        if (currenteHealthPercent > 98 || currenteHealthPercent < 2) percentageMultiplier = 0.2f;
-        else if (currenteHealthPercent > 95 & currenteHealthPercent < 98 || currenteHealthPercent > 2 & currenteHealthPercent < 5) percentageMultiplier = 0.2f;
-        else if (currenteHealthPercent > 85 & currenteHealthPercent < 95 || currenteHealthPercent > 5 & currenteHealthPercent < 15) percentageMultiplier = 0.4f;
-        else if (currenteHealthPercent > 70 & currenteHealthPercent < 85 || currenteHealthPercent > 15 & currenteHealthPercent < 30) percentageMultiplier = 0.7f;
-        else if (currenteHealthPercent > 60 & currenteHealthPercent < 70 || currenteHealthPercent > 30 & currenteHealthPercent < 40) percentageMultiplier = 1.0f;
-        else if (currenteHealthPercent > 50 & currenteHealthPercent < 60 || currenteHealthPercent > 40 & currenteHealthPercent < 50) percentageMultiplier = 1.2f;
+        if (currenteHealthPercent > 98 || currenteHealthPercent < 2) percentageMultiplier = 0.05f;
+        else if (currenteHealthPercent > 95 & currenteHealthPercent < 98 || currenteHealthPercent > 2 & currenteHealthPercent < 5) percentageMultiplier = 0.1f;
+        else if (currenteHealthPercent > 85 & currenteHealthPercent < 95 || currenteHealthPercent > 5 & currenteHealthPercent < 15) percentageMultiplier = 0.2f;
+        else if (currenteHealthPercent > 70 & currenteHealthPercent < 85 || currenteHealthPercent > 15 & currenteHealthPercent < 30) percentageMultiplier = 0.5f;
+        else if (currenteHealthPercent > 60 & currenteHealthPercent < 70 || currenteHealthPercent > 30 & currenteHealthPercent < 40) percentageMultiplier = 0.7f;
+        else if (currenteHealthPercent > 50 & currenteHealthPercent < 60 || currenteHealthPercent > 40 & currenteHealthPercent < 50) percentageMultiplier = 1.0f;
      
 
 
@@ -84,7 +79,7 @@ public class Country : MonoBehaviour
         {
             float chanceRoll = Random.Range(0.0f, 10.0f);
 
-            float infectChance = insideSpreadChance * plagueInsideChance * density * percentageMultiplier * 2 ;
+            float infectChance = insideSpreadChance * plagueInsideChance * density * percentageMultiplier  ;
 
           
 
@@ -131,17 +126,16 @@ public class Country : MonoBehaviour
 
             float currenteHealthPercent = (numberOfHealthy / populationTotal) * 100f;
 
-            if (currenteHealthPercent > 98 || currenteHealthPercent < 2) percentageMultiplier = 0.2f;
-            else if (currenteHealthPercent > 95 & currenteHealthPercent < 98 || currenteHealthPercent > 2 & currenteHealthPercent < 5) percentageMultiplier = 0.4f;
-            else if (currenteHealthPercent > 85 & currenteHealthPercent < 95 || currenteHealthPercent > 5 & currenteHealthPercent < 15) percentageMultiplier = 0.6f;
-            else if (currenteHealthPercent > 70 & currenteHealthPercent < 85 || currenteHealthPercent > 15 & currenteHealthPercent < 30) percentageMultiplier = 1.0f;
-            else if (currenteHealthPercent > 60 & currenteHealthPercent < 70 || currenteHealthPercent > 30 & currenteHealthPercent < 40) percentageMultiplier = 1.3f;
-            else if (currenteHealthPercent > 50 & currenteHealthPercent < 60 || currenteHealthPercent > 40 & currenteHealthPercent < 50) percentageMultiplier = 1.8f;
-
+            if (currenteHealthPercent > 98 || currenteHealthPercent < 2) percentageMultiplier = 0.05f;
+            else if (currenteHealthPercent > 95 & currenteHealthPercent < 98 || currenteHealthPercent > 2 & currenteHealthPercent < 5) percentageMultiplier = 0.1f;
+            else if (currenteHealthPercent > 85 & currenteHealthPercent < 95 || currenteHealthPercent > 5 & currenteHealthPercent < 15) percentageMultiplier = 0.2f;
+            else if (currenteHealthPercent > 70 & currenteHealthPercent < 85 || currenteHealthPercent > 15 & currenteHealthPercent < 30) percentageMultiplier = 0.5f;
+            else if (currenteHealthPercent > 60 & currenteHealthPercent < 70 || currenteHealthPercent > 30 & currenteHealthPercent < 40) percentageMultiplier = 0.7f;
+            else if (currenteHealthPercent > 50 & currenteHealthPercent < 60 || currenteHealthPercent > 40 & currenteHealthPercent < 50) percentageMultiplier = 1.0f;
 
             float chanceRoll = Random.Range(0.0f, 10.0f);
 
-            float infectChance = outsideSpreadChance * plagueOutsideChance * tourism * percentageMultiplier *2;
+            float infectChance = outsideSpreadChance * plagueOutsideChance * tourism * percentageMultiplier ;
 
             if (infectChance > chanceRoll)
             {
@@ -179,11 +173,11 @@ public class Country : MonoBehaviour
         Debug.Log(deathchance + " DeathChance juttu");
 
         int deadpeople;
-        deadpeople = (int)(numberOfInfected * deathchance);
+        deadpeople = (int)(numberOfInfected * deathchance * deathchance);
 
 
 
-        if (numberOfInfected > 0 & deadpeople > 0)
+        if (numberOfInfected > 1 && deadpeople > 0)
         { 
             if (deadpeople > numberOfInfected)
             {
@@ -191,7 +185,7 @@ public class Country : MonoBehaviour
             }
         numberOfInfected -= deadpeople;
         numberOfDeah += deadpeople;
-        Debug.Log(deadpeople + " people has died");
+        Debug.Log(deadpeople + " people has died " + numberOfInfected);
         }
     }
 
