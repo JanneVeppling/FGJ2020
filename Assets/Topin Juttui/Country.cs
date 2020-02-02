@@ -48,12 +48,15 @@ public class Country : MonoBehaviour
             SpreadInside();
             SpreadOutside();
             DeathChance();
+            
 
 
+           //  GameObject.Find("Maa" + id).GetComponent<Transpoerts>().TravellingInfect();
+            this.gameObject.GetComponent<Transpoerts > ().TravellingInfect();
             if (mutacounter == 1) mutacounter = 0;   
             else GameObject.Find("GameController").GetComponent<Plague>().Mutate();
             
-              targetTime = 1.0f;         
+              targetTime = 1.3f;         
         }
     }
 
@@ -118,8 +121,12 @@ public class Country : MonoBehaviour
 
         float plagueOutsideChance = GameObject.Find("GameController").GetComponent<Plague>().outsideChance;
 
-        // int healthy =(int) GameObject.Find("Maa" + neighbourRoll).GetComponent<Country>().numberOfHealthy; //////////////////////////////////////////////
-        int healthy = 10;
+        if (id != 3) // koska maata numero 3 ei ole olemassa
+        {
+            int healthy = GameObject.Find("Maa" + neighbourRoll).GetComponent<Country>().numberOfHealthy;
+            Debug.Log(healthy + "asdasd");
+      
+      
 
         if (healthy > 0)
         {
@@ -141,11 +148,11 @@ public class Country : MonoBehaviour
             {
 
                 float infectedRoll = (Random.Range(1f, 10f));
-                float infectedPeople = (numberOfHealthy / 400f * infectChance) * percentageMultiplier;
+                float infectedPeople = ((numberOfHealthy / 500f) * infectChance) * percentageMultiplier;
 
 
 
-                infectedPeople = infectedPeople + infectedRoll ;
+                infectedPeople = infectedPeople + infectedRoll;
 
 
                 if (infectedPeople >= GameObject.Find("Maa" + neighbourRoll).GetComponent<Country>().numberOfHealthy)
@@ -165,19 +172,20 @@ public class Country : MonoBehaviour
              
             }
         }
+        }
     }
     public void DeathChance()
     {
-        float chanceRoll = Random.Range(0.0f, 100.0f);
+        int chanceRoll = Random.Range(0, 100);
 
-        if (chanceRoll > 35f )
+        if (chanceRoll < 15 )
         { 
 
         float deathchance = (GameObject.Find("GameController").GetComponent<Plague>().deathchance);
         Debug.Log(deathchance + " DeathChance juttu");
 
         int deadpeople;
-        deadpeople = (int)(numberOfInfected * deathchance * deathchance);
+        deadpeople = (int)((numberOfInfected * deathchance * deathchance) + Random.Range(1,5));
 
 
 
