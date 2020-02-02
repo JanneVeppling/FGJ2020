@@ -2031,10 +2031,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1138586114}
   - component: {fileID: 1138586113}
-  - component: {fileID: 1138586112}
   - component: {fileID: 1138586111}
+  - component: {fileID: 1138586112}
   m_Layer: 0
-  m_Name: Maapalloikoni
+  m_Name: World
   m_TagString: Country
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2065,27 +2065,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1138586110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9469214d711f2945984ca9ddbee2e80, type: 3}
+  m_Script: {fileID: 11500000, guid: 8236ab9c3382cf54b89511b7bc2d720e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  worldName: Total
-  neighbourIds: []
-  neighbourCount: 0
-  outsideSpreadChance: 0
-  insideSpreadChance: 0
-  percentageMultiplier: 1
-  wealth: 0
-  density: 0
-  tourism: 0
-  populationTotal: 0
-  numberOfHealthy: 0
-  numberOfInfected: 0
-  numberOfDeah: 0
-  numberOfVaccinated: 0
-  numberOfTransports: 0
-  sentVaccinessPerSent: 0
-  targetTime: 10
+  population: 0
+  healthy: 0
+  infected: 0
+  vaccinated: 0
+  dead: 0
+  countries: []
 --- !u!212 &1138586113
 SpriteRenderer:
   m_ObjectHideFlags: 0

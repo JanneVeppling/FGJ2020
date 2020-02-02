@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
         totalFunds += 2 * (passiveIncome);
         numOfVaccines += 2 * (vaccinesPerSec);
     }
-
+    #region buttonHässäkkä
     public void VaccineLevel1()
     {
         if (totalFunds >= 500)
@@ -120,6 +120,7 @@ public class Player : MonoBehaviour
             totalFunds -= 10000;
         }
     }
+    #endregion
 
     public void SendVaccines()
     {

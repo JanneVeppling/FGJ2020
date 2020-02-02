@@ -19,12 +19,15 @@ public class UIController : MonoBehaviour
 
     public GameObject UpgradeMenu;
 
+    public GameObject[] countries;
+
     private bool UMenu;
 
     // Start is called before the first frame update
     void Start()
     {
-        SetUI("World",0,0,0,0,0);
+        countries = GameObject.FindGameObjectsWithTag("Country");
+        InvokeRepeating("RefreshUI", 1f, 1f);
     }
 
     // Update is called once per frame
@@ -44,6 +47,24 @@ public class UIController : MonoBehaviour
         UpgradeMenu.SetActive(UMenu);
     }
 
+    public void RefreshUI()
+    {
+        if (gameObject.GetComponent<Player>().currentSelecetedWorld == 0)
+        {
+            GameObject.Find("World").GetComponent<World>().GetWorldStats();
+            SetUI(GameObject.Find("World").GetComponent<World>().worldName, GameObject.Find("World").GetComponent<World>().population, GameObject.Find("World").GetComponent<World>().healthy, GameObject.Find("World").GetComponent<World>().infected, GameObject.Find("World").GetComponent<World>().dead, GameObject.Find("World").GetComponent<World>().vaccinated);
+        }
+        else
+        {
+            foreach (GameObject country in countries)
+            {
+                if (country.GetComponent<Country>().id == gameObject.GetComponent<Player>().currentSelecetedWorld)
+                {
+                    SetUI(country.GetComponent<Country>().worldName, country.GetComponent<Country>().populationTotal, country.GetComponent<Country>().numberOfHealthy, country.GetComponent<Country>().numberOfInfected, country.GetComponent<Country>().numberOfDeah, country.GetComponent<Country>().numberOfVaccinated);
+                }
+            }
+        }
+    }
     public void SetUI(string worldName, float populationTotal, float numberOfHealthy, float numberOfInfected, float numberOfDeah, float numberOfVaccinated)
     {
         Place.text = worldName;
