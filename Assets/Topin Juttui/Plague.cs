@@ -9,7 +9,6 @@ public class Plague : MonoBehaviour
     public float outsideChance;
     public float insideChance;
     public bool airborne;
-    float airborneMutationChance = 2f;
     public float deathchance =0;
     float mutationAcceleration;
 
@@ -30,8 +29,10 @@ public class Plague : MonoBehaviour
             outsideChance += 0.05f;
             insideChance += 0.05f;
 
-            deathchance += 0.00001f;
-            mutationAcceleration += 0.01f;
+            deathchance += 0.00005f;
+            mutationAcceleration += 0.02f;
+         
+
         }
 
 
