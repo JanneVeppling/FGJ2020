@@ -14,11 +14,9 @@ public class UIController : MonoBehaviour
     public TextMeshProUGUI noVac;
     public TextMeshProUGUI vaccines;
     public TextMeshProUGUI money;
-
     public Text sendInput;
 
     public GameObject UpgradeMenu;
-
     public GameObject[] countries;
 
     private bool UMenu;
